@@ -84,3 +84,36 @@ v05は各条件200戦、3ステージ×3初期デッキ×2難易度×初期/収�
 |economic|party|advanced|100%|98%|
 
 HP30、指定2属性構成、成長官僚のターン開始防御、停止中の防御抑制、更迭の行政人物対象、予告論点・コストのHTML表示、対象なし軽減カードを追加検証。スクリーンショットの表示不具合を元にCSSを修正したが、修正版の実ブラウザ描画確認は未実施。経済型等の高勝率は残る。人間の勝率とは異なる。
+
+## v09：同一条件でのバランス比較
+
+各条件100組、全2,400組（4デッキ×3準備×2難易度）。同じ簡易bot・seedで比較。準備失敗も本戦へ進む。
+
+|デッキ|準備|難易度|準備勝率|本戦勝率|
+|---|---|---|---:|---:|
+|admin|policy|normal|84%|97%|
+|admin|policy|advanced|84%|85%|
+|admin|media|normal|93%|86%|
+|admin|media|advanced|93%|53%|
+|admin|party|normal|99%|80%|
+|admin|party|advanced|99%|53%|
+|regional|policy|normal|84%|95%|
+|regional|policy|advanced|84%|85%|
+|regional|media|normal|85%|75%|
+|regional|media|advanced|85%|37%|
+|regional|party|normal|99%|84%|
+|regional|party|advanced|99%|52%|
+|noir|policy|normal|63%|82%|
+|noir|policy|advanced|63%|74%|
+|noir|media|normal|69%|72%|
+|noir|media|advanced|69%|62%|
+|noir|party|normal|74%|75%|
+|noir|party|advanced|74%|60%|
+|economic|policy|normal|80%|98%|
+|economic|policy|advanced|80%|91%|
+|economic|media|normal|93%|88%|
+|economic|media|advanced|93%|61%|
+|economic|party|normal|100%|86%|
+|economic|party|advanced|100%|56%|
+
+一律攻撃＋2の本戦案では地域上級の一部が6〜11%となったため不採用。現案の本戦は通常72〜98%、上級37〜91%。通常の平均は約85%、上級は約65%。目標に完全到達したとは言えず、財源対策はまだ強い。人間の勝率・操作の工夫による改善を測ったものではない。乱数と手順が変わるため、準備成功率と本戦勝率だけから因果関係は断定しない。ブラウザでの手動試遊は未実施。
