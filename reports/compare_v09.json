@@ -1,0 +1,1529 @@
+{
+  "trials": 300,
+  "method": "Controlled final only, forced preparation success, seeded; no collection or prep battle; heuristic sees published current plans; not human win rates.",
+  "rows": [
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "simple",
+      "wins": 246,
+      "total": 300,
+      "rate": 82,
+      "ci95": [
+        77.3,
+        85.9
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.9,
+      "meanWinHP": 11.9,
+      "growthRate": 99.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.9,
+      "meanWinHP": 17.1,
+      "growthRate": 100
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 298,
+      "total": 300,
+      "rate": 99.3,
+      "ci95": [
+        97.6,
+        99.8
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.7,
+      "meanWinHP": 19.6,
+      "growthRate": 100
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.3,
+      "meanWinHP": 23.2,
+      "growthRate": 99.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "simple",
+      "wins": 256,
+      "total": 300,
+      "rate": 85.3,
+      "ci95": [
+        80.9,
+        88.9
+      ],
+      "timeouts": 0,
+      "meanTurns": 8,
+      "meanWinHP": 12.2,
+      "growthRate": 99.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.9,
+      "meanWinHP": 17.7,
+      "growthRate": 100
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 253,
+      "total": 300,
+      "rate": 84.3,
+      "ci95": [
+        79.8,
+        88
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.8,
+      "meanWinHP": 12.2,
+      "growthRate": 99.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.8,
+      "meanWinHP": 17.3,
+      "growthRate": 100
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "simple",
+      "wins": 147,
+      "total": 300,
+      "rate": 49,
+      "ci95": [
+        43.4,
+        54.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.3,
+      "meanWinHP": 7.4,
+      "growthRate": 97.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 260,
+      "total": 300,
+      "rate": 86.7,
+      "ci95": [
+        82.4,
+        90.1
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.2,
+      "meanWinHP": 11.2,
+      "growthRate": 98.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 281,
+      "total": 300,
+      "rate": 93.7,
+      "ci95": [
+        90.3,
+        95.9
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.4,
+      "meanWinHP": 14,
+      "growthRate": 99.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 297,
+      "total": 300,
+      "rate": 99,
+      "ci95": [
+        97.1,
+        99.7
+      ],
+      "timeouts": 0,
+      "meanTurns": 5.9,
+      "meanWinHP": 19,
+      "growthRate": 99.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "simple",
+      "wins": 150,
+      "total": 300,
+      "rate": 50,
+      "ci95": [
+        44.4,
+        55.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.6,
+      "meanWinHP": 7.6,
+      "growthRate": 97.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 274,
+      "total": 300,
+      "rate": 91.3,
+      "ci95": [
+        87.6,
+        94
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.4,
+      "meanWinHP": 11.6,
+      "growthRate": 98.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 154,
+      "total": 300,
+      "rate": 51.3,
+      "ci95": [
+        45.7,
+        56.9
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.4,
+      "meanWinHP": 7.9,
+      "growthRate": 97.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 265,
+      "total": 300,
+      "rate": 88.3,
+      "ci95": [
+        84.2,
+        91.5
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.4,
+      "meanWinHP": 11.6,
+      "growthRate": 99
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "simple",
+      "wins": 227,
+      "total": 300,
+      "rate": 75.7,
+      "ci95": [
+        70.5,
+        80.2
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.8,
+      "meanWinHP": 16.7,
+      "growthRate": 95.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 297,
+      "total": 300,
+      "rate": 99,
+      "ci95": [
+        97.1,
+        99.7
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.8,
+      "meanWinHP": 22.4,
+      "growthRate": 99
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 296,
+      "total": 300,
+      "rate": 98.7,
+      "ci95": [
+        96.6,
+        99.5
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.7,
+      "meanWinHP": 24.2,
+      "growthRate": 100
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 5.7,
+      "meanWinHP": 27.1,
+      "growthRate": 98.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "simple",
+      "wins": 219,
+      "total": 300,
+      "rate": 73,
+      "ci95": [
+        67.7,
+        77.7
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.8,
+      "meanWinHP": 17.3,
+      "growthRate": 95
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 296,
+      "total": 300,
+      "rate": 98.7,
+      "ci95": [
+        96.6,
+        99.5
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.8,
+      "meanWinHP": 22.8,
+      "growthRate": 99
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 237,
+      "total": 300,
+      "rate": 79,
+      "ci95": [
+        74,
+        83.2
+      ],
+      "timeouts": 0,
+      "meanTurns": 8,
+      "meanWinHP": 17.2,
+      "growthRate": 96.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 296,
+      "total": 300,
+      "rate": 98.7,
+      "ci95": [
+        96.6,
+        99.5
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.7,
+      "meanWinHP": 23.2,
+      "growthRate": 99
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "simple",
+      "wins": 97,
+      "total": 300,
+      "rate": 32.3,
+      "ci95": [
+        27.3,
+        37.8
+      ],
+      "timeouts": 0,
+      "meanTurns": 5.9,
+      "meanWinHP": 12.5,
+      "growthRate": 82.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 267,
+      "total": 300,
+      "rate": 89,
+      "ci95": [
+        85,
+        92.1
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.4,
+      "meanWinHP": 15.6,
+      "growthRate": 96.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 286,
+      "total": 300,
+      "rate": 95.3,
+      "ci95": [
+        92.3,
+        97.2
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.4,
+      "meanWinHP": 19.8,
+      "growthRate": 98.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 5.7,
+      "meanWinHP": 23.8,
+      "growthRate": 97.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "simple",
+      "wins": 105,
+      "total": 300,
+      "rate": 35,
+      "ci95": [
+        29.8,
+        40.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.1,
+      "meanWinHP": 11.8,
+      "growthRate": 84
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 262,
+      "total": 300,
+      "rate": 87.3,
+      "ci95": [
+        83.1,
+        90.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.4,
+      "meanWinHP": 16.5,
+      "growthRate": 95.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 114,
+      "total": 300,
+      "rate": 38,
+      "ci95": [
+        32.7,
+        43.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.3,
+      "meanWinHP": 13,
+      "growthRate": 85.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 276,
+      "total": 300,
+      "rate": 92,
+      "ci95": [
+        88.4,
+        94.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.5,
+      "meanWinHP": 17,
+      "growthRate": 98.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "simple",
+      "wins": 210,
+      "total": 300,
+      "rate": 70,
+      "ci95": [
+        64.6,
+        74.9
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.4,
+      "meanWinHP": 13,
+      "growthRate": 96
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 237,
+      "total": 300,
+      "rate": 79,
+      "ci95": [
+        74,
+        83.2
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.5,
+      "meanWinHP": 12.9,
+      "growthRate": 94
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 251,
+      "total": 300,
+      "rate": 83.7,
+      "ci95": [
+        79.1,
+        87.4
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.4,
+      "meanWinHP": 16,
+      "growthRate": 96
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 273,
+      "total": 300,
+      "rate": 91,
+      "ci95": [
+        87.2,
+        93.7
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.4,
+      "meanWinHP": 17,
+      "growthRate": 94.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "simple",
+      "wins": 218,
+      "total": 300,
+      "rate": 72.7,
+      "ci95": [
+        67.4,
+        77.4
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.4,
+      "meanWinHP": 13.2,
+      "growthRate": 96
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 244,
+      "total": 300,
+      "rate": 81.3,
+      "ci95": [
+        76.5,
+        85.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.5,
+      "meanWinHP": 13.3,
+      "growthRate": 95.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 214,
+      "total": 300,
+      "rate": 71.3,
+      "ci95": [
+        66,
+        76.2
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.4,
+      "meanWinHP": 13.2,
+      "growthRate": 96.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 238,
+      "total": 300,
+      "rate": 79.3,
+      "ci95": [
+        74.4,
+        83.5
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.5,
+      "meanWinHP": 13,
+      "growthRate": 94.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "simple",
+      "wins": 176,
+      "total": 300,
+      "rate": 58.7,
+      "ci95": [
+        53,
+        64.1
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.1,
+      "meanWinHP": 11.7,
+      "growthRate": 93.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 205,
+      "total": 300,
+      "rate": 68.3,
+      "ci95": [
+        62.9,
+        73.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.2,
+      "meanWinHP": 11.7,
+      "growthRate": 92.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 244,
+      "total": 300,
+      "rate": 81.3,
+      "ci95": [
+        76.5,
+        85.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.3,
+      "meanWinHP": 14.4,
+      "growthRate": 96.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 268,
+      "total": 300,
+      "rate": 89.3,
+      "ci95": [
+        85.3,
+        92.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.3,
+      "meanWinHP": 15,
+      "growthRate": 93
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "simple",
+      "wins": 183,
+      "total": 300,
+      "rate": 61,
+      "ci95": [
+        55.4,
+        66.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.2,
+      "meanWinHP": 12.3,
+      "growthRate": 95
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 209,
+      "total": 300,
+      "rate": 69.7,
+      "ci95": [
+        64.2,
+        74.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.3,
+      "meanWinHP": 12.2,
+      "growthRate": 93
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 176,
+      "total": 300,
+      "rate": 58.7,
+      "ci95": [
+        53,
+        64.1
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.1,
+      "meanWinHP": 12.2,
+      "growthRate": 94
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 207,
+      "total": 300,
+      "rate": 69,
+      "ci95": [
+        63.6,
+        74
+      ],
+      "timeouts": 0,
+      "meanTurns": 4.2,
+      "meanWinHP": 11.8,
+      "growthRate": 92.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "simple",
+      "wins": 272,
+      "total": 300,
+      "rate": 90.7,
+      "ci95": [
+        86.8,
+        93.5
+      ],
+      "timeouts": 0,
+      "meanTurns": 9,
+      "meanWinHP": 13.6,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.5,
+      "meanWinHP": 20,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 8.5,
+      "meanWinHP": 21,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 5.8,
+      "meanWinHP": 24.2,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "simple",
+      "wins": 277,
+      "total": 300,
+      "rate": 92.3,
+      "ci95": [
+        88.8,
+        94.8
+      ],
+      "timeouts": 0,
+      "meanTurns": 9.1,
+      "meanWinHP": 13.9,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.5,
+      "meanWinHP": 20.4,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 275,
+      "total": 300,
+      "rate": 91.7,
+      "ci95": [
+        88,
+        94.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 9,
+      "meanWinHP": 14.1,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.5,
+      "meanWinHP": 20.5,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "simple",
+      "wins": 177,
+      "total": 300,
+      "rate": 59,
+      "ci95": [
+        53.4,
+        64.4
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.3,
+      "meanWinHP": 8.8,
+      "growthRate": 97.3
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "none",
+      "policy": "tactical",
+      "wins": 290,
+      "total": 300,
+      "rate": 96.7,
+      "ci95": [
+        94,
+        98.2
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.4,
+      "meanWinHP": 14,
+      "growthRate": 99.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "simple",
+      "wins": 288,
+      "total": 300,
+      "rate": 96,
+      "ci95": [
+        93.1,
+        97.7
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.9,
+      "meanWinHP": 15.5,
+      "growthRate": 100
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "finance",
+      "policy": "tactical",
+      "wins": 300,
+      "total": 300,
+      "rate": 100,
+      "ci95": [
+        98.7,
+        100
+      ],
+      "timeouts": 0,
+      "meanTurns": 5.8,
+      "meanWinHP": 20.5,
+      "growthRate": 99.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "simple",
+      "wins": 186,
+      "total": 300,
+      "rate": 62,
+      "ci95": [
+        56.4,
+        67.3
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.6,
+      "meanWinHP": 9.2,
+      "growthRate": 97.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "press",
+      "policy": "tactical",
+      "wins": 288,
+      "total": 300,
+      "rate": 96,
+      "ci95": [
+        93.1,
+        97.7
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.6,
+      "meanWinHP": 15.1,
+      "growthRate": 99.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "simple",
+      "wins": 187,
+      "total": 300,
+      "rate": 62.3,
+      "ci95": [
+        56.7,
+        67.6
+      ],
+      "timeouts": 0,
+      "meanTurns": 7.6,
+      "meanWinHP": 9.4,
+      "growthRate": 97.3
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "support": "parliament",
+      "policy": "tactical",
+      "wins": 289,
+      "total": 300,
+      "rate": 96.3,
+      "ci95": [
+        93.6,
+        97.9
+      ],
+      "timeouts": 0,
+      "meanTurns": 6.5,
+      "meanWinHP": 14.9,
+      "growthRate": 99.3
+    }
+  ],
+  "paired": [
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 52,
+      "lost": 0,
+      "deltaPoints": 17.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "press",
+      "gained": 17,
+      "lost": 7,
+      "deltaPoints": 3.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 11,
+      "lost": 4,
+      "deltaPoints": 2.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 0,
+      "lost": 0,
+      "deltaPoints": 0
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 0,
+      "lost": 0,
+      "deltaPoints": 0
+    },
+    {
+      "type": "admin",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 0,
+      "lost": 0,
+      "deltaPoints": 0
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 135,
+      "lost": 1,
+      "deltaPoints": 44.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "press",
+      "gained": 15,
+      "lost": 12,
+      "deltaPoints": 1
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 21,
+      "lost": 14,
+      "deltaPoints": 2.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 39,
+      "lost": 2,
+      "deltaPoints": 12.3
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 17,
+      "lost": 3,
+      "deltaPoints": 4.7
+    },
+    {
+      "type": "admin",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 17,
+      "lost": 12,
+      "deltaPoints": 1.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 69,
+      "lost": 0,
+      "deltaPoints": 23
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "press",
+      "gained": 5,
+      "lost": 13,
+      "deltaPoints": -2.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 14,
+      "lost": 4,
+      "deltaPoints": 3.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 3,
+      "lost": 0,
+      "deltaPoints": 1
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 0,
+      "lost": 1,
+      "deltaPoints": -0.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 0,
+      "lost": 1,
+      "deltaPoints": -0.3
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 189,
+      "lost": 0,
+      "deltaPoints": 63
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "press",
+      "gained": 24,
+      "lost": 16,
+      "deltaPoints": 2.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 29,
+      "lost": 12,
+      "deltaPoints": 5.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 33,
+      "lost": 0,
+      "deltaPoints": 11
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 6,
+      "lost": 11,
+      "deltaPoints": -1.7
+    },
+    {
+      "type": "regional",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 13,
+      "lost": 4,
+      "deltaPoints": 3
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 42,
+      "lost": 1,
+      "deltaPoints": 13.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "press",
+      "gained": 8,
+      "lost": 0,
+      "deltaPoints": 2.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 6,
+      "lost": 2,
+      "deltaPoints": 1.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 37,
+      "lost": 1,
+      "deltaPoints": 12
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 8,
+      "lost": 1,
+      "deltaPoints": 2.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 6,
+      "lost": 5,
+      "deltaPoints": 0.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 71,
+      "lost": 3,
+      "deltaPoints": 22.7
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "press",
+      "gained": 11,
+      "lost": 4,
+      "deltaPoints": 2.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 7,
+      "lost": 7,
+      "deltaPoints": 0
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 68,
+      "lost": 5,
+      "deltaPoints": 21
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 10,
+      "lost": 6,
+      "deltaPoints": 1.3
+    },
+    {
+      "type": "noir",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 7,
+      "lost": 5,
+      "deltaPoints": 0.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 28,
+      "lost": 0,
+      "deltaPoints": 9.3
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "press",
+      "gained": 5,
+      "lost": 0,
+      "deltaPoints": 1.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 3,
+      "lost": 0,
+      "deltaPoints": 1
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 0,
+      "lost": 0,
+      "deltaPoints": 0
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 0,
+      "lost": 0,
+      "deltaPoints": 0
+    },
+    {
+      "type": "economic",
+      "difficulty": "normal",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 0,
+      "lost": 0,
+      "deltaPoints": 0
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "finance",
+      "gained": 111,
+      "lost": 0,
+      "deltaPoints": 37
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "press",
+      "gained": 18,
+      "lost": 9,
+      "deltaPoints": 3
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "policy": "simple",
+      "support": "parliament",
+      "gained": 15,
+      "lost": 5,
+      "deltaPoints": 3.3
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "finance",
+      "gained": 10,
+      "lost": 0,
+      "deltaPoints": 3.3
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "press",
+      "gained": 3,
+      "lost": 5,
+      "deltaPoints": -0.7
+    },
+    {
+      "type": "economic",
+      "difficulty": "advanced",
+      "policy": "tactical",
+      "support": "parliament",
+      "gained": 6,
+      "lost": 7,
+      "deltaPoints": -0.3
+    }
+  ],
+  "sourceSha256": "01501634379e6f570a4be00731f022272a198e1669cea07b00a9bcda5b6aa21d"
+}

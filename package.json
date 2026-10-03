@@ -9,6 +9,7 @@
     "balance:v06": "node tests/balance_v06.cjs",
     "balance:v07": "node tests/balance_v07.cjs",
     "balance:v08": "node tests/balance_v08.cjs",
-    "balance:v09": "node tests/balance_v09.cjs"
+    "balance:v09": "node tests/balance_v09.cjs",
+    "compare:v09": "node tests/compare_v09.cjs"
   }
 }
