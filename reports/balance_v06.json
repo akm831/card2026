@@ -1,0 +1,86 @@
+[
+  {
+    "type": "admin",
+    "prep": "policy",
+    "prepWin": 44,
+    "finalWin": 63,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "media",
+    "prepWin": 73,
+    "finalWin": 50,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "party",
+    "prepWin": 93,
+    "finalWin": 52,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "policy",
+    "prepWin": 84,
+    "finalWin": 97,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "media",
+    "prepWin": 86,
+    "finalWin": 83,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "party",
+    "prepWin": 100,
+    "finalWin": 84,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "policy",
+    "prepWin": 91,
+    "finalWin": 85,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "media",
+    "prepWin": 91,
+    "finalWin": 79,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "party",
+    "prepWin": 95,
+    "finalWin": 77,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "policy",
+    "prepWin": 93,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "media",
+    "prepWin": 99,
+    "finalWin": 96,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "party",
+    "prepWin": 100,
+    "finalWin": 97,
+    "total": 100
+  }
+]
