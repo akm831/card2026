@@ -1,0 +1,12 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');const source=fs.readFileSync('src/enemy_ai.js','utf8'),ctx=vm.createContext({});vm.runInContext(source,ctx);const run=s=>vm.runInContext(s,ctx);
+run(`const view={playerHP:30,playerBlock:0,enemyHP:30,lastPlayerDamage:8,turn:2,growth:{},allies:[]};const attack=(id,n,cost=1)=>({id,cost,effects:[{op:'damage',n}]});const guard={id:'guard',cost:1,effects:[{op:'block',n:5}]};`);
+assert.equal(run("selectEnemyActions([attack('high',10,2),attack('a',6),attack('b',6),attack('c',6)],3,view).reduce((n,c)=>n+c.effects[0].n,0)"),18);
+assert.equal(run("selectEnemyActions([guard,attack('hit',4)],1,{...view,enemyHP:5,lastPlayerDamage:15})[0].id"),'guard');
+assert.equal(run("selectEnemyActions([guard,attack('hit',4)],1,{...view,playerHP:4,enemyHP:5,lastPlayerDamage:15})[0].id"),'hit');
+run("const people={...view,growth:{official:{level:1}},allies:[{id:'leader',aff:'politics',disabledUntil:0},{id:'official',aff:'admin',disabledUntil:0}]};const bounce={id:'bounce',cost:2,effects:[{op:'damage',n:7},{op:'bounce'}]};const suppress={id:'stop',cost:1,effects:[{op:'suppress',aff:'politics'}]};");
+assert.equal(run('enemyTarget(bounce,people)'),'official');assert.equal(run('enemyTarget(suppress,people)'),'leader');
+assert.equal(run('enemyTarget(suppress,{...people,allies:[{id:"leader",aff:"politics",disabledUntil:3}]})'),null);
+assert(run('enemyPlanScore([guard,guard],{...view,lastPlayerDamage:1})-enemyPlanScore([guard],{...view,lastPlayerDamage:1})<1'));
+run("const held=attack('deferred',8,2);let plan=selectEnemyActions([attack('new',7,2),attack('small',3)],1,view,[held]);if(plan.reduce((n,c)=>n+c.cost,0)>3||plan[0].id!=='deferred')throw Error('reserved budget');let before=JSON.stringify({view,people,bounce});selectEnemyActions([bounce],3,people);if(JSON.stringify({view,people,bounce})!==before)throw Error('mutation');");
+const html=fs.readFileSync('prototypes/kasumigaseki_cards_v12.html','utf8');assert(html.includes(source));
+console.log('PASS: affordable combinations, low-HP defense, lethal attack, grown-person target, eligible suppression, redundant defense, deferred budget, pure public view, embedded source parity.');
