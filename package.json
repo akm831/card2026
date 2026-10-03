@@ -1,10 +1,10 @@
 {
   "name": "kasumigaseki-card-battle",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "private": true,
   "description": "政治・行政を題材にしたカードバトル試作",
   "scripts": {
-    "test": "node tests/check_v05.cjs && node tests/check_v06.cjs && node tests/check_v07.cjs && node tests/check_v08.cjs && node tests/check_v09.cjs",
+    "test": "node tests/check_v05.cjs && node tests/check_v06.cjs && node tests/check_v07.cjs && node tests/check_v08.cjs && node tests/check_v09.cjs && node tests/check_v10.cjs && node tests/check_v10_equivalence.cjs",
     "balance:v05": "node tests/balance_v05.cjs",
     "balance:v06": "node tests/balance_v06.cjs",
     "balance:v07": "node tests/balance_v07.cjs",

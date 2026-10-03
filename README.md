@@ -4,7 +4,7 @@
 
 ## 遊び方
 
-最新は `prototypes/kasumigaseki_cards_v09.html`。ダウンロードしてブラウザで開けます。依存ライブラリ・ビルド不要。ブラウザ保存が許可された環境では進行を自動保存します。v05とv06の保存データは独立です。
+最新は `prototypes/kasumigaseki_cards_v10.html`。ダウンロードしてブラウザで開けます。依存ライブラリ・ビルド不要。ブラウザ保存が許可された環境では進行を自動保存します。v05とv06の保存データは独立です。
 
 ローカルサーバーを使う場合：
 
@@ -12,7 +12,7 @@
 python3 -m http.server 8000
 ```
 
-`http://localhost:8000/prototypes/kasumigaseki_cards_v09.html` を開いてください。
+`http://localhost:8000/prototypes/kasumigaseki_cards_v10.html` を開いてください。
 
 ## 現在の検証対象
 
@@ -22,7 +22,7 @@ v06「夢の超特急」1案件：案件分析→デッキ編成→準備戦3択
 
 ## ファイル
 
-- `prototypes/`：v01〜v09の実行可能なHTML。旧版は比較用。
+- `prototypes/`：v01〜v10の実行可能なHTML。旧版は比較用。
 - `docs/SPEC.md`：次回試作の決定事項・保留事項・PvP設計方針。
 - `docs/IMPLEMENTATION.md`：実装状況・設計・制約。
 - `docs/HISTORY.md`：試作の経緯。
@@ -60,3 +60,7 @@ npm run balance:v06
 ## v09比較検証
 
 `npm run compare:v09` で無対策と各対策・単純botと予告対応botを比較できます（19,200戦、数分）。`docs/BALANCE_REVIEW_V09.md` に結果と判断、`reports/compare_v09.json` に詳細。ゲーム数値は変更していません。
+
+## v10：人による試遊の判断支援
+
+数値はv09と同じ。カードの「効果を確認」で使用後の見込み被ダメージと実攻撃ダメージを表示。対象選択中の予告を強調し、人物の成長連携・成長能力の発動をログに表示。「試遊メモ」で難しさ、迷ったカード、準備の理由、人物の貢献を記録・JSON出力できます。外部送信はなし。手順はdocs/PLAYTEST_V10.md。
