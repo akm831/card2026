@@ -1,0 +1,194 @@
+[
+  {
+    "type": "admin",
+    "prep": "policy",
+    "difficulty": "normal",
+    "prepWin": 95,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "policy",
+    "difficulty": "advanced",
+    "prepWin": 83,
+    "finalWin": 99,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "media",
+    "difficulty": "normal",
+    "prepWin": 98,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "media",
+    "difficulty": "advanced",
+    "prepWin": 91,
+    "finalWin": 96,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "party",
+    "difficulty": "normal",
+    "prepWin": 100,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "admin",
+    "prep": "party",
+    "difficulty": "advanced",
+    "prepWin": 96,
+    "finalWin": 94,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "policy",
+    "difficulty": "normal",
+    "prepWin": 92,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "policy",
+    "difficulty": "advanced",
+    "prepWin": 73,
+    "finalWin": 96,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "media",
+    "difficulty": "normal",
+    "prepWin": 95,
+    "finalWin": 98,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "media",
+    "difficulty": "advanced",
+    "prepWin": 52,
+    "finalWin": 83,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "party",
+    "difficulty": "normal",
+    "prepWin": 100,
+    "finalWin": 97,
+    "total": 100
+  },
+  {
+    "type": "regional",
+    "prep": "party",
+    "difficulty": "advanced",
+    "prepWin": 98,
+    "finalWin": 84,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "policy",
+    "difficulty": "normal",
+    "prepWin": 93,
+    "finalWin": 97,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "policy",
+    "difficulty": "advanced",
+    "prepWin": 92,
+    "finalWin": 98,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "media",
+    "difficulty": "normal",
+    "prepWin": 93,
+    "finalWin": 97,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "media",
+    "difficulty": "advanced",
+    "prepWin": 92,
+    "finalWin": 97,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "party",
+    "difficulty": "normal",
+    "prepWin": 93,
+    "finalWin": 96,
+    "total": 100
+  },
+  {
+    "type": "noir",
+    "prep": "party",
+    "difficulty": "advanced",
+    "prepWin": 94,
+    "finalWin": 94,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "policy",
+    "difficulty": "normal",
+    "prepWin": 98,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "policy",
+    "difficulty": "advanced",
+    "prepWin": 94,
+    "finalWin": 100,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "media",
+    "difficulty": "normal",
+    "prepWin": 100,
+    "finalWin": 99,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "media",
+    "difficulty": "advanced",
+    "prepWin": 96,
+    "finalWin": 97,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "party",
+    "difficulty": "normal",
+    "prepWin": 100,
+    "finalWin": 99,
+    "total": 100
+  },
+  {
+    "type": "economic",
+    "prep": "party",
+    "difficulty": "advanced",
+    "prepWin": 100,
+    "finalWin": 98,
+    "total": 100
+  }
+]

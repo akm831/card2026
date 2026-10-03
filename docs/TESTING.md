@@ -51,3 +51,36 @@ v05は各条件200戦、3ステージ×3初期デッキ×2難易度×初期/収�
 |経済＋行政|party|advanced|100%|100%|
 
 極端な低勝率は見られなかった。一方で経済型は上級もほぼ全勝であり、難易度の完成とは判断しない。構造の検証版として公開し、手動プレイで強さと逆転の手触りを確認する。回帰検証は成長のターン持ち越し、成長Undo、成長後コスト2＋6、能力停止での加算抑制、保存復帰、別戦闘でのリセットを追加。実ブラウザでの操作・表示は未確認。
+
+## v08事前検証
+
+4デッキ×3準備×2難易度×100組。同じ簡易botを使用。
+
+|デッキ|準備|難易度|準備勝率|本戦勝率|
+|---|---|---|---:|---:|
+|admin|policy|normal|95%|100%|
+|admin|policy|advanced|83%|99%|
+|admin|media|normal|98%|100%|
+|admin|media|advanced|91%|96%|
+|admin|party|normal|100%|100%|
+|admin|party|advanced|96%|94%|
+|regional|policy|normal|92%|100%|
+|regional|policy|advanced|73%|96%|
+|regional|media|normal|95%|98%|
+|regional|media|advanced|52%|83%|
+|regional|party|normal|100%|97%|
+|regional|party|advanced|98%|84%|
+|noir|policy|normal|93%|97%|
+|noir|policy|advanced|92%|98%|
+|noir|media|normal|93%|97%|
+|noir|media|advanced|92%|97%|
+|noir|party|normal|93%|96%|
+|noir|party|advanced|94%|94%|
+|economic|policy|normal|98%|100%|
+|economic|policy|advanced|94%|100%|
+|economic|media|normal|100%|99%|
+|economic|media|advanced|96%|97%|
+|economic|party|normal|100%|99%|
+|economic|party|advanced|100%|98%|
+
+HP30、指定2属性構成、成長官僚のターン開始防御、停止中の防御抑制、更迭の行政人物対象、予告論点・コストのHTML表示、対象なし軽減カードを追加検証。スクリーンショットの表示不具合を元にCSSを修正したが、修正版の実ブラウザ描画確認は未実施。経済型等の高勝率は残る。人間の勝率とは異なる。
