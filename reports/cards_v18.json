@@ -1,0 +1,192 @@
+[
+  {
+    "id": "independentAudit",
+    "name": "独立検証",
+    "aff": "admin",
+    "type": "attack",
+    "cost": 2,
+    "text": "攻撃10。自分の負担カードを最大1枚除去。ブロック3。成長した同属性人物がいれば攻撃＋4。",
+    "effects": [
+      {
+        "op": "damage",
+        "n": 10
+      },
+      {
+        "op": "clean",
+        "n": 1
+      },
+      {
+        "op": "block",
+        "n": 3
+      }
+    ],
+    "chapter": 2
+  },
+  {
+    "id": "jointStatement",
+    "name": "共同声明",
+    "aff": "politics",
+    "type": "defense",
+    "cost": 1,
+    "text": "ブロック4。配置解除した人物1枚を回収。対象がなければ1枚引く。",
+    "effects": [
+      {
+        "op": "block",
+        "n": 4
+      },
+      {
+        "op": "recover"
+      }
+    ],
+    "chapter": 2
+  },
+  {
+    "id": "testimony",
+    "name": "証言の裏付け",
+    "aff": "press",
+    "type": "attack",
+    "cost": 1,
+    "text": "攻撃6。次ターンに追加で1枚引く。",
+    "effects": [
+      {
+        "op": "damage",
+        "n": 6
+      },
+      {
+        "op": "nextDraw",
+        "n": 1
+      }
+    ],
+    "chapter": 2
+  },
+  {
+    "id": "equipmentRenewal",
+    "name": "設備更新",
+    "aff": "business",
+    "type": "attack",
+    "cost": 2,
+    "text": "攻撃10。次ターンのブロック3。成長した同属性人物がいれば攻撃＋4。",
+    "effects": [
+      {
+        "op": "damage",
+        "n": 10
+      },
+      {
+        "op": "nextBlock",
+        "n": 3
+      }
+    ],
+    "chapter": 2
+  },
+  {
+    "id": "reliefDesk",
+    "name": "救済窓口",
+    "aff": "community",
+    "type": "prep",
+    "cost": 1,
+    "text": "配置解除した人物1枚を回収。対象がなければ1枚引く。HPを2回復。",
+    "effects": [
+      {
+        "op": "recover"
+      },
+      {
+        "op": "heal",
+        "n": 2
+      }
+    ],
+    "chapter": 2
+  },
+  {
+    "id": "secretSettlement",
+    "name": "秘密の補償",
+    "aff": "noir",
+    "type": "defense",
+    "cost": 2,
+    "text": "ブロック8。配置解除した人物1枚を回収（いなければ1枚引く）。敵山札に疑惑追及1枚追加。",
+    "effects": [
+      {
+        "op": "block",
+        "n": 8
+      },
+      {
+        "op": "recover"
+      },
+      {
+        "op": "scandal",
+        "n": 1
+      }
+    ],
+    "chapter": 2
+  },
+  {
+    "id": "environmentOfficer",
+    "name": "環境行政の担当官",
+    "aff": "admin",
+    "type": "person",
+    "cost": 2,
+    "text": "配置時ブロック3。各ターン最初の行政通常カードで、このターンの人物干渉を1回防ぐ。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+    "effects": [],
+    "engine": "compliance",
+    "chapter": 2
+  },
+  {
+    "id": "crossParty",
+    "name": "超党派の調整役",
+    "aff": "politics",
+    "type": "person",
+    "cost": 2,
+    "text": "配置時ブロック3。有効な人物が2属性以上なら、各ターン最初の政治通常カードで最大攻撃の予告1つを−2。人物干渉は残る。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+    "effects": [],
+    "engine": "coalition",
+    "chapter": 2
+  },
+  {
+    "id": "investigator",
+    "name": "調査記者",
+    "aff": "press",
+    "type": "person",
+    "cost": 2,
+    "text": "配置時ブロック3。各ターン最初の予告介入で、次ターンの追加ドロー1枚を予約。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+    "effects": [],
+    "engine": "followup",
+    "chapter": 2
+  },
+  {
+    "id": "transitionAdvisor",
+    "name": "産業転換の推進者",
+    "aff": "business",
+    "type": "person",
+    "cost": 2,
+    "text": "配置時ブロック3。各ターン最初の元コスト2以上の経済通常カードで、次ターンのコスト＋1を予約。ドローは増えない。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+    "effects": [],
+    "engine": "transition",
+    "chapter": 2
+  },
+  {
+    "id": "residentAdvocate",
+    "name": "住民代表",
+    "aff": "community",
+    "type": "person",
+    "cost": 2,
+    "text": "配置時ブロック3。各ターン最初の地域通常カードで、配置解除した人物1枚を手札に回収。対象がなくても追加ドローはしない。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+    "effects": [],
+    "engine": "redeploy",
+    "chapter": 2
+  },
+  {
+    "id": "industryBroker",
+    "name": "業界の仲介人",
+    "aff": "noir",
+    "type": "person",
+    "cost": 2,
+    "text": "配置時ブロック3。各ターン最初の裏人脈通常カードで、人物干渉を含む予告すべての攻撃を−2。干渉は残る。配置時に疑惑追及1枚追加。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+    "effects": [
+      {
+        "op": "scandal",
+        "n": 1
+      }
+    ],
+    "engine": "interferenceCut",
+    "chapter": 2
+  }
+]

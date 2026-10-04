@@ -1,10 +1,10 @@
 {
   "name": "kasumigaseki-card-battle",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "private": true,
   "description": "政治・行政を題材にしたカードバトル試作",
   "scripts": {
-    "test": "node tests/check_v05.cjs && node tests/check_v06.cjs && node tests/check_v07.cjs && node tests/check_v08.cjs && node tests/check_v09.cjs && node tests/check_v10.cjs && node tests/check_v10_equivalence.cjs && node tests/check_v11.cjs && node tests/check_v12.cjs && node tests/check_enemy_v12.cjs && node tests/check_v13.cjs && node tests/check_v14.cjs && node tests/check_v15.cjs && node tests/check_v16.cjs && node tests/check_v17.cjs",
+    "test": "node tests/check_v05.cjs && node tests/check_v06.cjs && node tests/check_v07.cjs && node tests/check_v08.cjs && node tests/check_v09.cjs && node tests/check_v10.cjs && node tests/check_v10_equivalence.cjs && node tests/check_v11.cjs && node tests/check_v12.cjs && node tests/check_enemy_v12.cjs && node tests/check_v13.cjs && node tests/check_v14.cjs && node tests/check_v15.cjs && node tests/check_v16.cjs && node tests/check_v17.cjs && node tests/check_v18.cjs",
     "balance:v05": "node tests/balance_v05.cjs",
     "balance:v06": "node tests/balance_v06.cjs",
     "balance:v07": "node tests/balance_v07.cjs",
@@ -26,6 +26,8 @@
     "compare:pairs": "node tests/attribute_pairs_v17.cjs",
     "compare:pairs:holdout": "node tests/pairs_holdout_v17.cjs",
     "compare:reward-packs": "node tests/reward_packs_v17.cjs",
-    "compare:adaptive": "node tests/adaptive_rewards_v17.cjs"
+    "compare:adaptive": "node tests/adaptive_rewards_v17.cjs",
+    "compare:pollution": "node tests/pollution_v18.cjs",
+    "compare:campaign:v18": "node tests/campaign_v18.cjs"
   }
 }

@@ -77,3 +77,8 @@ reporterDrawがbattle.used.reporterDrawで人物追加ドローを共通の1枚�
 ## v17：対象属性と報酬
 
 敵行動に `aff` を付与。`enemyAff` は現行論点の対応を旧形式のフォールバックに使う。`reduceAff`／`affs` と `matchesForecast` を軽減・無効化・対象数・プレビューに共有し、対象なしの妨害を使用不可にする。従来の論点タグは準備差し替え・特定条件で残す。`finish` の報酬は5回の独立抽選、選択報酬は廃止。保存キー `seikyoku-v17`。
+
+
+## v18：本編第2章
+
+`caseIssues()`・`prepOptions()`を案件ごとの論点と準備に使う。敵カードの属性は論点タグと別に定義。新人物はエンジンタグを持ち、既存の共通成長と追加能力を組み合わせる。`nextEnergy`は投資と独立した翌手番コスト予約。`chapterTwoUnlocked`と`completedCases`を保存。報酬・交換・カード一覧は`collectible()`で解禁を揃える。AIの選択処理は変更なし。現在も単独HTMLに後付けラッパーがあり、モジュール分離は未完了。
