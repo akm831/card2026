@@ -42,6 +42,7 @@ jobs:
           "$GODOT" --headless --path godot --script tests/test_engine.gd
           timeout 120 "$GODOT" --headless --path godot --script tests/test_ui.gd
           timeout 120 "$GODOT" --headless --path godot --script tests/test_layout.gd
+          timeout 120 "$GODOT" --headless --path godot --script tests/test_mobile.gd
       - name: Real-render screenshots
         run: |
           sudo apt-get update

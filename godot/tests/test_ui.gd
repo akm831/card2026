@@ -38,4 +38,6 @@ func run():
 	print("PASS: menu, four battle layouts, action animations/SE, Undo, end turn and saved resume (headless, no visual inspection).")
 	scene.queue_free()
 	await process_frame
+	# Allow the audio server to release playback before process shutdown.
+	await create_timer(0.12).timeout
 	quit(0)

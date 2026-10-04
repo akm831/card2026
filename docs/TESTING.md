@@ -183,3 +183,7 @@ v13回帰は段階解放、プロファイル構成/置換枚数、報酬選択/
 ## Godot・Android試作01
 
 Godot4.6で48戦・896時点のHTML比較、保存復元、4画面のヘッドレス操作・演出を確認。APK出力と署名検証を実施。実機・見た目・音は未確認。報酬抽選は比較対象外。予告の浅いコピー挙動は互換として残り、別課題で修正・再測定する。
+
+## Godot UI05
+
+Godotインポート後、`--headless --path godot --script tests/test_mobile.gd`で模擬安全領域/固定手札/指ドラッグ/音量設定/中断復帰を検証。`test_render.gd`は実ディスプレイかxvfb-runで実行し、build/godot_ui05_*.pngを確認。Android実機の物理的な欠け・実音量は自動テストで代替しない。詳細はdocs/GODOT_UI_V05.md。
