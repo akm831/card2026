@@ -347,7 +347,7 @@ func show_credits():
 	content.editable = false
 	content.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
 	content.custom_minimum_size = Vector2(800,480)
-	content.text = "政局の手札 — Godot試作\n\nGodot Engine\n" + OS.get_license_text() + "\n\nNoto Sans JP\n" + FileAccess.get_file_as_string("res://fonts/OFL.txt") + "\n\nGodot dependencies\n" + JSON.stringify(OS.get_copyright_info(),"  ") + "\n" + JSON.stringify(OS.get_license_info(),"  ")
+	content.text = "政局の手札 — Godot試作\n\nGodot Engine\n" + Engine.get_license_text() + "\n\nNoto Sans JP\n" + FileAccess.get_file_as_string("res://fonts/OFL.txt") + "\n\nGodot dependencies\n" + JSON.stringify(Engine.get_copyright_info(),"  ") + "\n" + JSON.stringify(Engine.get_license_info(),"  ")
 	dialog.add_child(content)
 	add_child(dialog)
 	dialog.confirmed.connect(dialog.queue_free)

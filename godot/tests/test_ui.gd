@@ -4,6 +4,10 @@ func _initialize():
 func run():
 	root.size = Vector2i(1280,800)
 	var scene = load("res://main.tscn").instantiate()
+	if scene.get_script() == null:
+		push_error("Main scene script failed to load")
+		quit(1)
+		return
 	root.add_child(scene)
 	await process_frame
 	for type in ["admin","regional","noir","economic"]:
