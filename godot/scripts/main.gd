@@ -683,12 +683,14 @@ func show_credits():
 # Atlas regions are sampled at runtime: no text or rules baked into illustrations.
 func card_art(c: Dictionary) -> Texture2D:
 	var tiles = {"official":0,"leader":1,"reporter":2,"delay":4,"answer":7,"lobby":6,"report":8,"investigate":8,"brief":8,"budgetReview":5}
-	var tile = tiles.get(c.id,-1)
+	var added_tiles = {"economist":0,"organizer":1,"broker":2,"whip":3,"investigate":4,"invest":5,"network":6,"deal":7,"debate":8}
+	var added = added_tiles.has(c.id)
+	var tile = added_tiles[c.id] if added else tiles.get(c.id,-1)
 	if tile < 0:
 		if c.type == "person":
 			return load("res://art/placeholders/person.svg")
 		tile = {"admin":4,"politics":6,"press":8,"business":5,"community":6,"noir":6}.get(c.aff,4)
-	var atlas = load("res://art/generated/political_atlas.jpg")
+	var atlas = load("res://art/generated/political_atlas_v05.jpg" if added else "res://art/generated/political_atlas.jpg")
 	var texture = AtlasTexture.new()
 	texture.atlas = atlas
 	var cell = atlas.get_width()/3.0

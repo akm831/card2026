@@ -52,7 +52,14 @@ func run():
 	await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png("res://../build/godot_ui05_settings.png")
 	scene.close_popup()
+	scene.game.b.enemyHP = 30
+	scene.game.b.hand = ["economist","organizer","broker","whip","investigate","network","deal"]
+	scene.render_battle()
+	for frame in range(12): await process_frame
+	await RenderingServer.frame_post_draw
+	root.get_texture().get_image().save_png("res://../build/godot_ui05_new_art.png")
 	scene.queue_free()
 	for frame in range(6): await process_frame
+	await create_timer(0.12).timeout
 	print("PASS: OpenGL rendered selected, targeting and victory screenshots (desktop, not Android).")
 	quit()

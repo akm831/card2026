@@ -12,6 +12,9 @@ func run():
 	root.add_child(scene)
 	await frames()
 	var settings_before = {"bgm":scene.bgm_volume,"se":scene.se_volume,"wide":scene.wide_margin,"fx":scene.fx_enabled}
+	for id in ["economist","organizer","broker","whip","investigate","invest","network","deal","debate"]:
+		var art = scene.card_art(scene.game.card(id))
+		expect(art is AtlasTexture and art.atlas.resource_path.ends_with("political_atlas_v05.jpg"),"Individual art "+id)
 	var view = Rect2(0,0,1280,720)
 	# Screen-to-canvas includes window translation exactly once.
 	var inverse = Transform2D(Vector2(0.5,0),Vector2(0,0.5),Vector2(-50,-100))
@@ -98,6 +101,7 @@ func run():
 	scene.bgm_volume = settings_before.bgm; scene.se_volume = settings_before.se
 	scene.wide_margin = settings_before.wide; scene.fx_enabled = settings_before.fx; scene.save_settings()
 	scene.queue_free(); await frames()
+	await create_timer(0.12).timeout
 	if failures.is_empty():
 		print("PASS: physical safe-area scale/translation, left/right cutouts, bottom inset, wide margins, 1/2/4/7/8 fixed uncropped cards, touch log, modal bounds, audio settings/pause/resources (synthetic input, not physical Android).")
 		call_deferred("quit",0)

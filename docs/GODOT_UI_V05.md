@@ -23,15 +23,21 @@
 - 4デッキの操作/演出/Undo/ターン終了/再開を通過。
 - 従来の3横画面サイズ、7枚/3人物/3予告/長文/選択/勝利/超過手札の配置検証を通過。
 - 新規`test_mobile.gd`：物理座標の拡大率/画面位置、左右カメラ穴44px、下部24px、標準/広め余白、1/2/4/7/8枚、固定寸法/全体表示、超過最後のカード到達、ポップアップ安全領域、Viewportへ注入した指ドラッグ、長いログ最終部、独立音量スライダー、設定保存、ミュート、中断/復帰、音素材長/ループを通過。
-- 実OpenGL描画（Mesa/仮想X11）で選択/対象/勝利/1・2・4枚/安全領域/設定を確認。PNG8枚をAPK Artifactへ同梱。
+- 実OpenGL描画（Mesa/仮想X11）で選択/対象/勝利/1・2・4枚/安全領域/設定/追加絵を確認。PNG9枚をAPK Artifactへ同梱。
 - Oggをデコードして64.0秒、ピーク0.35522、最終→先頭のサンプル差0.00283を確認。SE8種類のピーク0.85未満。これは数値検証であり、聴感評価ではない。
 
 ## 実機で残る確認
 
 Androidの左右両向きでカメラホール/丸い端/操作領域が隠れないこと、指でログを最後まで送れること、スピーカー/イヤホンの音量と繰り返しの疲れにくさはユーザー実機で要確認。模擬テスト/スクリーンショットを実機保証として扱わない。
 
-通常カードの一部は属性内で共通絵、他属性の人物は仮アイコンのまま。個別絵を増やす素材制作は未完了で、#9へ残す。Godot側は国会決戦1戦のみ。キャンペーンはHTML v18に残っている。
+新規3×3アトラスで財務アドバイザー/地域の世話役/裏の仲介人、採決の調整/裏取り/先行投資/地域の支え/密室取引/議場の説得へ個別絵を追加。初期6属性の人物に肖像を用意した。通常カードの残りは属性内共通絵。全カードの個別絵は将来の素材拡充。Godot側は国会決戦1戦のみ。キャンペーンはHTML v18に残っている。
 
 ## ビルド
 
 GitHub Actionsは`test_mobile.gd`を追加。Godot4.6/Android SDK35、version code5、version name0.1-ui05。音素材はコミット済みなので通常のAPKビルドでnumpy/ffmpegは不要。固定テスト署名キー未設定時は実行ごとに署名が変わる。インストールの更新が拒否された場合、旧版削除が必要（旧版の保存も消える）。
+
+## 追加画像の生成記録
+
+内蔵imagegenで生成し、768×768のJPEGへ最適化。保存先`godot/art/generated/political_atlas_v05.jpg`。既存アトラスを画風参照のみとして、新規9タイルを作成。プロンプト：
+
+Original fictional political card game, EXACT equal 3×3 tiles, no gutters or borders. Coarse early PlayStation/3DS tactical RPG handpainted look matching existing atlas, bold ink contours, simplified faces, muted navy/ochre/earth colors. Row1 financial adviser woman/glasses/ledger; older community organizer/green jacket; secretive middle-aged intermediary/dark suit. Row2 parliamentary raised-hand voting; evidence folder/magnifying glass; industrial construction/investment. Row3 town-hall community meeting; sealed-envelope exchange across dim desk; speaker persuading assembly. No flags, chrysanthemum, real politicians, national emblems, logos, lettering, card frames, UI or captions.
