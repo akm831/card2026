@@ -1,3 +1,11 @@
 node_modules/
 .DS_Store
 *.log
+.tools/
+build/
+godot/.godot/
+godot/fonts/*.ttf
+*.keystore
+*.jks
+godot/tests/parity_fixtures.json
+godot/fonts/*.import

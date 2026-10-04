@@ -1,0 +1,2093 @@
+{
+  "schema": 1,
+  "sourceSha256": "c7a3882a6522d63d9b140415d163481f91520a5634af4b128ce0f4efb2273812",
+  "cards": {
+    "answer": {
+      "id": "answer",
+      "name": "資料答弁",
+      "aff": "admin",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック7。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 7
+        }
+      ]
+    },
+    "procedure": {
+      "id": "procedure",
+      "name": "手続きの確認",
+      "aff": "admin",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃11。 成長した同属性人物がいれば攻撃＋4。 ブロック4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 11
+        },
+        {
+          "op": "block",
+          "n": 4
+        }
+      ]
+    },
+    "clean": {
+      "id": "clean",
+      "name": "負担の整理",
+      "aff": "admin",
+      "type": "prep",
+      "cost": 1,
+      "text": "自分の負担カードを最大2枚除去。1枚引く。",
+      "effects": [
+        {
+          "op": "clean",
+          "n": 2
+        },
+        {
+          "op": "draw",
+          "n": 1
+        }
+      ]
+    },
+    "delay": {
+      "id": "delay",
+      "name": "追加資料の提出",
+      "aff": "admin",
+      "type": "disrupt",
+      "cost": 1,
+      "text": "予告行動1つを次ターンへ延期。",
+      "effects": [
+        {
+          "op": "delay"
+        }
+      ]
+    },
+    "official": {
+      "id": "official",
+      "name": "敏腕官僚",
+      "aff": "admin",
+      "type": "person",
+      "cost": 1,
+      "text": "配置時ブロック3。行政の通常カード累計2枚で成長時ブロック5。成長後、各ターン開始時ブロック5。 成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "adminPair"
+    },
+    "lobby": {
+      "id": "lobby",
+      "name": "根回し",
+      "aff": "politics",
+      "type": "prep",
+      "cost": 0,
+      "text": "次の攻撃＋3。",
+      "effects": [
+        {
+          "op": "boost",
+          "n": 3
+        }
+      ]
+    },
+    "debate": {
+      "id": "debate",
+      "name": "議場の説得",
+      "aff": "politics",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃9。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 9
+        }
+      ]
+    },
+    "protect": {
+      "id": "protect",
+      "name": "会派の結束",
+      "aff": "politics",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック6。このターンの人物干渉を1回防ぐ。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 6
+        },
+        {
+          "op": "protect",
+          "n": 1
+        }
+      ]
+    },
+    "whip": {
+      "id": "whip",
+      "name": "採決の調整",
+      "aff": "politics",
+      "type": "disrupt",
+      "cost": 1,
+      "text": "政治属性の攻撃予告すべての攻撃力を−4。人物への干渉は防がない。",
+      "effects": [
+        {
+          "op": "reduceAff",
+          "affs": [
+            "politics"
+          ],
+          "n": 4
+        }
+      ]
+    },
+    "leader": {
+      "id": "leader",
+      "name": "与党幹部",
+      "aff": "politics",
+      "type": "person",
+      "cost": 1,
+      "text": "配置時ブロック3。人物配置で次の政治カード−1コスト。政治の通常カード累計3枚で成長。成長後、最初の政治カードで次の攻撃＋2。 成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "deployDiscount"
+    },
+    "report": {
+      "id": "report",
+      "name": "調査報道",
+      "aff": "press",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃8。未無効化の【疑惑】論点の予告があれば＋4。成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 8,
+          "condition": "scandal",
+          "bonus": 4
+        }
+      ]
+    },
+    "brief": {
+      "id": "brief",
+      "name": "記者説明",
+      "aff": "press",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック3。次ターンに追加で1枚引く。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 3
+        },
+        {
+          "op": "nextDraw",
+          "n": 1
+        }
+      ]
+    },
+    "investigate": {
+      "id": "investigate",
+      "name": "裏取り",
+      "aff": "press",
+      "type": "prep",
+      "cost": 2,
+      "text": "2枚引く。",
+      "effects": [
+        {
+          "op": "draw",
+          "n": 2
+        }
+      ]
+    },
+    "counter": {
+      "id": "counter",
+      "name": "反証公開",
+      "aff": "press",
+      "type": "disrupt",
+      "cost": 2,
+      "text": "報道・裏人脈属性の攻撃予告1つを無効化。ブロック2。",
+      "effects": [
+        {
+          "op": "cancel",
+          "affs": [
+            "press",
+            "noir"
+          ]
+        },
+        {
+          "op": "block",
+          "n": 2
+        }
+      ]
+    },
+    "reporter": {
+      "id": "reporter",
+      "name": "新聞記者",
+      "aff": "press",
+      "type": "person",
+      "cost": 1,
+      "text": "配置時ブロック3。予告への介入で1枚引く。介入累計3回で成長。成長後は最初の報道攻撃でも1枚引く。介入・成長時・攻撃の追加ドローは合わせて各ターン1枚まで。 成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "planDraw"
+    },
+    "invest": {
+      "id": "invest",
+      "name": "先行投資",
+      "aff": "business",
+      "type": "prep",
+      "cost": 1,
+      "text": "次ターンのコスト＋1、1枚追加で引く。",
+      "effects": [
+        {
+          "op": "invest",
+          "n": 1
+        }
+      ]
+    },
+    "efficiency": {
+      "id": "efficiency",
+      "name": "費用対効果",
+      "aff": "business",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃7。同ターン2枚目以降の経済カードなら＋2。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 7,
+          "condition": "business",
+          "bonus": 2
+        }
+      ]
+    },
+    "reserve": {
+      "id": "reserve",
+      "name": "予備資金",
+      "aff": "business",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック7。次ターンに引く枚数−1。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 7
+        },
+        {
+          "op": "nextDraw",
+          "n": -1
+        }
+      ]
+    },
+    "fund": {
+      "id": "fund",
+      "name": "資金調達",
+      "aff": "business",
+      "type": "prep",
+      "cost": 2,
+      "text": "コスト＋1、1枚引く。【調整の負担】1枚を捨て札へ追加（各ターン1回）。",
+      "effects": [
+        {
+          "op": "energy",
+          "n": 1
+        },
+        {
+          "op": "draw",
+          "n": 1
+        },
+        {
+          "op": "burden",
+          "n": 1
+        }
+      ],
+      "once": true
+    },
+    "economist": {
+      "id": "economist",
+      "name": "財務アドバイザー",
+      "aff": "business",
+      "type": "person",
+      "cost": 1,
+      "text": "配置時ブロック3。最初の経済カードで次ターン防御2。経済の通常カード累計3枚で成長。成長後、さらに次ターン防御1。 成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "reserveBlock"
+    },
+    "voice": {
+      "id": "voice",
+      "name": "地元の声",
+      "aff": "community",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃8。地域人物がいれば＋1。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 8,
+          "condition": "community",
+          "bonus": 1
+        }
+      ]
+    },
+    "network": {
+      "id": "network",
+      "name": "地域の支え",
+      "aff": "community",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック4。HPを1回復。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 4
+        },
+        {
+          "op": "heal",
+          "n": 1
+        }
+      ]
+    },
+    "return": {
+      "id": "return",
+      "name": "再登板",
+      "aff": "community",
+      "type": "prep",
+      "cost": 1,
+      "text": "配置解除した人物1枚を手札に戻す。対象がなければ1枚引く。",
+      "effects": [
+        {
+          "op": "recover"
+        }
+      ]
+    },
+    "petition": {
+      "id": "petition",
+      "name": "地域との協議",
+      "aff": "community",
+      "type": "disrupt",
+      "cost": 2,
+      "text": "地域属性の攻撃予告すべての攻撃力を−4。ブロック3。",
+      "effects": [
+        {
+          "op": "reduceAff",
+          "affs": [
+            "community"
+          ],
+          "n": 4
+        },
+        {
+          "op": "block",
+          "n": 3
+        }
+      ]
+    },
+    "organizer": {
+      "id": "organizer",
+      "name": "地域の世話役",
+      "aff": "community",
+      "type": "person",
+      "cost": 1,
+      "text": "配置時ブロック3。最初の地域カードでHP＋1、人物手札戻しで追加ドロー。地域の通常カード累計3枚で成長。成長後、最初の地域カードでさらにHP＋1。 成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "rescue"
+    },
+    "force": {
+      "id": "force",
+      "name": "強引な動員",
+      "aff": "noir",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃13。敵の山札に疑惑追及1枚追加。 成長した同属性人物がいれば攻撃＋4。 ブロック3。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 13
+        },
+        {
+          "op": "scandal",
+          "n": 1
+        },
+        {
+          "op": "block",
+          "n": 3
+        }
+      ]
+    },
+    "deal": {
+      "id": "deal",
+      "name": "密室取引",
+      "aff": "noir",
+      "type": "disrupt",
+      "cost": 1,
+      "text": "予告行動1つを無効化。敵の山札に疑惑追及1枚追加。",
+      "effects": [
+        {
+          "op": "cancel"
+        },
+        {
+          "op": "scandal",
+          "n": 1
+        }
+      ]
+    },
+    "silence": {
+      "id": "silence",
+      "name": "口止め",
+      "aff": "noir",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック11。敵の山札に疑惑追及1枚追加。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 11
+        },
+        {
+          "op": "scandal",
+          "n": 1
+        }
+      ]
+    },
+    "favor": {
+      "id": "favor",
+      "name": "借りをつくる",
+      "aff": "noir",
+      "type": "prep",
+      "cost": 0,
+      "text": "コスト＋1。敵の山札に疑惑追及1枚追加（各ターン1回）。",
+      "effects": [
+        {
+          "op": "energy",
+          "n": 1
+        },
+        {
+          "op": "scandal",
+          "n": 1
+        }
+      ],
+      "once": true
+    },
+    "broker": {
+      "id": "broker",
+      "name": "裏の仲介人",
+      "aff": "noir",
+      "type": "person",
+      "cost": 1,
+      "text": "配置時ブロック3。予告を逆順にして疑惑追加。最初の妨害コスト−1。裏人脈の通常カード累計3枚で成長。成長後、最初の裏人脈カードで次の攻撃＋2。 成長後の同属性コスト2攻撃は＋4。",
+      "effects": [
+        {
+          "op": "reverse"
+        },
+        {
+          "op": "scandal",
+          "n": 1
+        }
+      ],
+      "engine": "disruptDiscount"
+    },
+    "burden": {
+      "id": "burden",
+      "name": "調整の負担",
+      "aff": "business",
+      "type": "prep",
+      "cost": 99,
+      "text": "使用不可。手札を圧迫する。",
+      "effects": [],
+      "bad": true
+    },
+    "budgetReview": {
+      "id": "budgetReview",
+      "name": "予算精査",
+      "aff": "admin",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃12。ブロック2。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 12
+        },
+        {
+          "op": "block",
+          "n": 2
+        }
+      ]
+    },
+    "staffChange": {
+      "id": "staffChange",
+      "name": "調整役の交代",
+      "aff": "politics",
+      "type": "prep",
+      "cost": 1,
+      "text": "配置解除した人物1枚を手札に戻す。対象がなければ1枚引く。次の攻撃＋2。",
+      "effects": [
+        {
+          "op": "recover"
+        },
+        {
+          "op": "boost",
+          "n": 2
+        }
+      ]
+    },
+    "publicQuestion": {
+      "id": "publicQuestion",
+      "name": "公開質問",
+      "aff": "press",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃11。ブロック3。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 11
+        },
+        {
+          "op": "block",
+          "n": 3
+        }
+      ]
+    },
+    "projectReview": {
+      "id": "projectReview",
+      "name": "事業再評価",
+      "aff": "business",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃12。HPを1回復。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 12
+        },
+        {
+          "op": "heal",
+          "n": 1
+        }
+      ]
+    },
+    "localPetition": {
+      "id": "localPetition",
+      "name": "地元の陳情",
+      "aff": "community",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃10。ブロック5。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 10
+        },
+        {
+          "op": "block",
+          "n": 5
+        }
+      ]
+    },
+    "fulfillDeal": {
+      "id": "fulfillDeal",
+      "name": "取引の履行",
+      "aff": "noir",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃10。HPを2回復。疑惑は追加しない。 成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 10
+        },
+        {
+          "op": "heal",
+          "n": 2
+        }
+      ]
+    },
+    "planExplain": {
+      "id": "planExplain",
+      "name": "計画説明",
+      "aff": "admin",
+      "type": "attack",
+      "cost": 1,
+      "text": "攻撃6。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 6
+        }
+      ]
+    },
+    "openDebate": {
+      "id": "openDebate",
+      "name": "公開討論",
+      "aff": "press",
+      "type": "attack",
+      "cost": 1,
+      "text": "攻撃7。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 7
+        }
+      ]
+    },
+    "routeExplain": {
+      "id": "routeExplain",
+      "name": "沿線説明会",
+      "aff": "community",
+      "type": "attack",
+      "cost": 1,
+      "text": "攻撃8。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 8
+        }
+      ]
+    },
+    "independentAudit": {
+      "id": "independentAudit",
+      "name": "独立検証",
+      "aff": "admin",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃10。自分の負担カードを最大1枚除去。ブロック3。成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 10
+        },
+        {
+          "op": "clean",
+          "n": 1
+        },
+        {
+          "op": "block",
+          "n": 3
+        }
+      ],
+      "chapter": 2
+    },
+    "jointStatement": {
+      "id": "jointStatement",
+      "name": "共同声明",
+      "aff": "politics",
+      "type": "defense",
+      "cost": 1,
+      "text": "ブロック4。配置解除した人物1枚を回収。対象がなければ1枚引く。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 4
+        },
+        {
+          "op": "recover"
+        }
+      ],
+      "chapter": 2
+    },
+    "testimony": {
+      "id": "testimony",
+      "name": "証言の裏付け",
+      "aff": "press",
+      "type": "attack",
+      "cost": 1,
+      "text": "攻撃6。次ターンに追加で1枚引く。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 6
+        },
+        {
+          "op": "nextDraw",
+          "n": 1
+        }
+      ],
+      "chapter": 2
+    },
+    "equipmentRenewal": {
+      "id": "equipmentRenewal",
+      "name": "設備更新",
+      "aff": "business",
+      "type": "attack",
+      "cost": 2,
+      "text": "攻撃10。次ターンのブロック3。成長した同属性人物がいれば攻撃＋4。",
+      "effects": [
+        {
+          "op": "damage",
+          "n": 10
+        },
+        {
+          "op": "nextBlock",
+          "n": 3
+        }
+      ],
+      "chapter": 2
+    },
+    "reliefDesk": {
+      "id": "reliefDesk",
+      "name": "救済窓口",
+      "aff": "community",
+      "type": "prep",
+      "cost": 1,
+      "text": "配置解除した人物1枚を回収。対象がなければ1枚引く。HPを2回復。",
+      "effects": [
+        {
+          "op": "recover"
+        },
+        {
+          "op": "heal",
+          "n": 2
+        }
+      ],
+      "chapter": 2
+    },
+    "secretSettlement": {
+      "id": "secretSettlement",
+      "name": "秘密の補償",
+      "aff": "noir",
+      "type": "defense",
+      "cost": 2,
+      "text": "ブロック8。配置解除した人物1枚を回収（いなければ1枚引く）。敵山札に疑惑追及1枚追加。",
+      "effects": [
+        {
+          "op": "block",
+          "n": 8
+        },
+        {
+          "op": "recover"
+        },
+        {
+          "op": "scandal",
+          "n": 1
+        }
+      ],
+      "chapter": 2
+    },
+    "environmentOfficer": {
+      "id": "environmentOfficer",
+      "name": "環境行政の担当官",
+      "aff": "admin",
+      "type": "person",
+      "cost": 2,
+      "text": "配置時ブロック3。各ターン最初の行政通常カードで、このターンの人物干渉を1回防ぐ。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "compliance",
+      "chapter": 2
+    },
+    "crossParty": {
+      "id": "crossParty",
+      "name": "超党派の調整役",
+      "aff": "politics",
+      "type": "person",
+      "cost": 2,
+      "text": "配置時ブロック3。有効な人物が2属性以上なら、各ターン最初の政治通常カードで最大攻撃の予告1つを−2。人物干渉は残る。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "coalition",
+      "chapter": 2
+    },
+    "investigator": {
+      "id": "investigator",
+      "name": "調査記者",
+      "aff": "press",
+      "type": "person",
+      "cost": 2,
+      "text": "配置時ブロック3。各ターン最初の予告介入で、次ターンの追加ドロー1枚を予約。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "followup",
+      "chapter": 2
+    },
+    "transitionAdvisor": {
+      "id": "transitionAdvisor",
+      "name": "産業転換の推進者",
+      "aff": "business",
+      "type": "person",
+      "cost": 2,
+      "text": "配置時ブロック3。各ターン最初の元コスト2以上の経済通常カードで、次ターンのコスト＋1を予約。ドローは増えない。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "transition",
+      "chapter": 2
+    },
+    "residentAdvocate": {
+      "id": "residentAdvocate",
+      "name": "住民代表",
+      "aff": "community",
+      "type": "person",
+      "cost": 2,
+      "text": "配置時ブロック3。各ターン最初の地域通常カードで、配置解除した人物1枚を手札に回収。対象がなくても追加ドローはしない。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+      "effects": [],
+      "engine": "redeploy",
+      "chapter": 2
+    },
+    "industryBroker": {
+      "id": "industryBroker",
+      "name": "業界の仲介人",
+      "aff": "noir",
+      "type": "person",
+      "cost": 2,
+      "text": "配置時ブロック3。各ターン最初の裏人脈通常カードで、人物干渉を含む予告すべての攻撃を−2。干渉は残る。配置時に疑惑追及1枚追加。 同属性の通常カード累計3枚で成長。成長後の同属性コスト2攻撃は＋4。",
+      "effects": [
+        {
+          "op": "scandal",
+          "n": 1
+        }
+      ],
+      "engine": "interferenceCut",
+      "chapter": 2
+    }
+  },
+  "decks": {
+    "admin": [
+      "answer",
+      "answer",
+      "procedure",
+      "procedure",
+      "budgetReview",
+      "planExplain",
+      "delay",
+      "delay",
+      "official",
+      "lobby",
+      "lobby",
+      "debate",
+      "debate",
+      "protect",
+      "protect",
+      "staffChange",
+      "whip",
+      "leader",
+      "budgetReview",
+      "staffChange"
+    ],
+    "regional": [
+      "report",
+      "report",
+      "brief",
+      "brief",
+      "publicQuestion",
+      "investigate",
+      "openDebate",
+      "counter",
+      "reporter",
+      "voice",
+      "voice",
+      "network",
+      "network",
+      "routeExplain",
+      "return",
+      "localPetition",
+      "petition",
+      "organizer",
+      "localPetition",
+      "publicQuestion"
+    ],
+    "noir": [
+      "lobby",
+      "lobby",
+      "debate",
+      "debate",
+      "protect",
+      "protect",
+      "staffChange",
+      "whip",
+      "leader",
+      "force",
+      "force",
+      "deal",
+      "deal",
+      "silence",
+      "silence",
+      "fulfillDeal",
+      "favor",
+      "broker",
+      "fulfillDeal",
+      "staffChange"
+    ],
+    "economic": [
+      "answer",
+      "answer",
+      "procedure",
+      "procedure",
+      "clean",
+      "clean",
+      "delay",
+      "delay",
+      "official",
+      "invest",
+      "invest",
+      "efficiency",
+      "efficiency",
+      "reserve",
+      "reserve",
+      "fund",
+      "fund",
+      "economist",
+      "projectReview",
+      "budgetReview"
+    ]
+  },
+  "attributes": {
+    "admin": "行政",
+    "politics": "政治",
+    "press": "報道",
+    "business": "経済",
+    "community": "地域",
+    "noir": "裏人脈"
+  },
+  "labels": {
+    "admin": "行政＋政治",
+    "regional": "地域＋報道",
+    "noir": "裏人脈＋政治",
+    "economic": "経済＋行政"
+  },
+  "issues": {
+    "finance": {
+      "name": "財源問題",
+      "stars": 3,
+      "strong": "財源追及",
+      "weak": "財源説明済み",
+      "damage": 10,
+      "soft": 6
+    },
+    "parliament": {
+      "name": "議会対立",
+      "stars": 2,
+      "strong": "議会からの追及",
+      "weak": "会派内調整済み",
+      "damage": 7,
+      "soft": 3
+    },
+    "region": {
+      "name": "地方反発",
+      "stars": 3,
+      "strong": "地域負担の追及",
+      "weak": "地域への説明済み",
+      "damage": 9,
+      "soft": 4
+    },
+    "press": {
+      "name": "報道批判",
+      "stars": 1,
+      "strong": "計画への批判報道",
+      "weak": "報道への反証済み",
+      "damage": 7,
+      "soft": 3
+    }
+  },
+  "growth": {
+    "official": 2,
+    "leader": 3,
+    "reporter": 3,
+    "economist": 3,
+    "organizer": 3,
+    "broker": 3,
+    "environmentOfficer": 3,
+    "crossParty": 3,
+    "investigator": 3,
+    "transitionAdvisor": 3,
+    "residentAdvocate": 3,
+    "industryBroker": 3
+  },
+  "enemies": {
+    "none": [
+      {
+        "id": "finance_0",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 10
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_1",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_0",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 10
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_1",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "parliament_0",
+        "name": "更迭要求",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "bounce"
+          }
+        ]
+      },
+      {
+        "id": "parliament_1",
+        "name": "造反工作",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          },
+          {
+            "op": "suppress",
+            "aff": "politics"
+          }
+        ]
+      },
+      {
+        "id": "parliament_0",
+        "name": "更迭要求",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "bounce"
+          }
+        ]
+      },
+      {
+        "id": "parliament_1",
+        "name": "造反工作",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          },
+          {
+            "op": "suppress",
+            "aff": "politics"
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "press_0",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          }
+        ]
+      },
+      {
+        "id": "press_1",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "press_0",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          }
+        ]
+      },
+      {
+        "id": "press_1",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      }
+    ],
+    "finance": [
+      {
+        "id": "finance_soft_0",
+        "name": "財源説明済み",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 1
+          }
+        ]
+      },
+      {
+        "id": "finance_soft_1",
+        "name": "財源説明済み",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 3
+          },
+          {
+            "op": "block",
+            "n": 1
+          }
+        ]
+      },
+      {
+        "id": "finance_soft_0",
+        "name": "財源説明済み",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 1
+          }
+        ]
+      },
+      {
+        "id": "finance_soft_1",
+        "name": "財源説明済み",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 3
+          },
+          {
+            "op": "block",
+            "n": 1
+          }
+        ]
+      },
+      {
+        "id": "parliament_0",
+        "name": "更迭要求",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "bounce"
+          }
+        ]
+      },
+      {
+        "id": "parliament_1",
+        "name": "造反工作",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          },
+          {
+            "op": "suppress",
+            "aff": "politics"
+          }
+        ]
+      },
+      {
+        "id": "parliament_0",
+        "name": "更迭要求",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "bounce"
+          }
+        ]
+      },
+      {
+        "id": "parliament_1",
+        "name": "造反工作",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          },
+          {
+            "op": "suppress",
+            "aff": "politics"
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "press_0",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          }
+        ]
+      },
+      {
+        "id": "press_1",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "press_0",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          }
+        ]
+      },
+      {
+        "id": "press_1",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      }
+    ],
+    "parliament": [
+      {
+        "id": "finance_0",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 10
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_1",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_0",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 10
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_1",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "parliament_soft_0",
+        "name": "会派内調整済み",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "parliament_soft_1",
+        "name": "会派内調整済み",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "parliament_soft_0",
+        "name": "会派内調整済み",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "parliament_soft_1",
+        "name": "会派内調整済み",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "press_0",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          }
+        ]
+      },
+      {
+        "id": "press_1",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "press_0",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          }
+        ]
+      },
+      {
+        "id": "press_1",
+        "name": "計画への批判報道",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      }
+    ],
+    "press": [
+      {
+        "id": "finance_0",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 10
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_1",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_0",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 10
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "finance_1",
+        "name": "財源追及",
+        "issue": "finance",
+        "aff": "admin",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "block",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "parliament_0",
+        "name": "更迭要求",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "bounce"
+          }
+        ]
+      },
+      {
+        "id": "parliament_1",
+        "name": "造反工作",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          },
+          {
+            "op": "suppress",
+            "aff": "politics"
+          }
+        ]
+      },
+      {
+        "id": "parliament_0",
+        "name": "更迭要求",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 7
+          },
+          {
+            "op": "bounce"
+          }
+        ]
+      },
+      {
+        "id": "parliament_1",
+        "name": "造反工作",
+        "issue": "parliament",
+        "aff": "politics",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 4
+          },
+          {
+            "op": "suppress",
+            "aff": "politics"
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_0",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 9
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "region_1",
+        "name": "地域負担の追及",
+        "issue": "region",
+        "aff": "community",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 6
+          },
+          {
+            "op": "block",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "press_soft_0",
+        "name": "報道への反証済み",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "press_soft_1",
+        "name": "報道への反証済み",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "press_soft_0",
+        "name": "報道への反証済み",
+        "issue": "press",
+        "aff": "press",
+        "cost": 2,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "press_soft_1",
+        "name": "報道への反証済み",
+        "issue": "press",
+        "aff": "press",
+        "cost": 1,
+        "effects": [
+          {
+            "op": "damage",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "name": "慎重な審議",
+        "cost": 1,
+        "issue": null,
+        "effects": [
+          {
+            "op": "block",
+            "n": 5
+          }
+        ]
+      }
+    ]
+  }
+}

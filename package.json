@@ -28,6 +28,9 @@
     "compare:reward-packs": "node tests/reward_packs_v17.cjs",
     "compare:adaptive": "node tests/adaptive_rewards_v17.cjs",
     "compare:pollution": "node tests/pollution_v18.cjs",
-    "compare:campaign:v18": "node tests/campaign_v18.cjs"
+    "compare:campaign:v18": "node tests/campaign_v18.cjs",
+    "export:godot": "node scripts/export_godot_data.cjs",
+    "check:godot-data": "node scripts/export_godot_data.cjs --check",
+    "fixtures:godot": "node scripts/export_godot_fixtures.cjs"
   }
 }

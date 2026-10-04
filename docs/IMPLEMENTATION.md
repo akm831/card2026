@@ -82,3 +82,8 @@ reporterDrawがbattle.used.reporterDrawで人物追加ドローを共通の1枚�
 ## v18：本編第2章
 
 `caseIssues()`・`prepOptions()`を案件ごとの論点と準備に使う。敵カードの属性は論点タグと別に定義。新人物はエンジンタグを持ち、既存の共通成長と追加能力を組み合わせる。`nextEnergy`は投資と独立した翌手番コスト予約。`chapterTwoUnlocked`と`completedCases`を保存。報酬・交換・カード一覧は`collectible()`で解禁を揃える。AIの選択処理は変更なし。現在も単独HTMLに後付けラッパーがあり、モジュール分離は未完了。
+
+
+## Godot・Android試作01
+
+Godot試作01をgodot/へ追加。戦闘とUIを分離。v18抽出データの一致をCIで検出し、48戦・896時点の比較を行う。対象は旧初期カードの国会決戦1戦で、新章・報酬等は未移植。詳細はGODOT_ANDROID.md。
