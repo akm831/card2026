@@ -1,0 +1,613 @@
+{
+  "trials": 100,
+  "sourceSha256": "75890934f2c8a92e2d0d865472f9614a028d2fbddb01bd3ed38c1494f3614c89",
+  "edits": {
+    "finance": {
+      "admin": [
+        [
+          "planExplain",
+          "whip"
+        ],
+        [
+          "staffChange",
+          "investigate"
+        ]
+      ],
+      "regional": [
+        [
+          "petition",
+          "whip"
+        ]
+      ],
+      "noir": [
+        [
+          "favor",
+          "whip"
+        ],
+        [
+          "silence",
+          "investigate"
+        ]
+      ],
+      "economic": [
+        [
+          "clean",
+          "whip"
+        ]
+      ]
+    },
+    "public": {
+      "admin": [
+        [
+          "planExplain",
+          "counter"
+        ],
+        [
+          "whip",
+          "petition"
+        ]
+      ],
+      "regional": [
+        [
+          "openDebate",
+          "counter"
+        ],
+        [
+          "return",
+          "petition"
+        ]
+      ],
+      "noir": [
+        [
+          "favor",
+          "counter"
+        ],
+        [
+          "whip",
+          "petition"
+        ]
+      ],
+      "economic": [
+        [
+          "clean",
+          "counter"
+        ],
+        [
+          "reserve",
+          "petition"
+        ]
+      ]
+    }
+  },
+  "method": "Tactical policy, same seed and starter core. Finance rebuild uses at most one selected reward, public at most two; existing starter-owned copies usable. Random rewards ignored, no full collection assumption. Full preparation+final. No human test.",
+  "rows": [
+    {
+      "profile": "finance",
+      "type": "admin",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 75,
+      "prepWins": 71,
+      "timeouts": 0,
+      "rate": 75
+    },
+    {
+      "profile": "finance",
+      "type": "admin",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 79,
+      "prepWins": 68,
+      "timeouts": 0,
+      "rate": 79
+    },
+    {
+      "profile": "finance",
+      "type": "admin",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 60,
+      "prepWins": 83,
+      "timeouts": 0,
+      "rate": 60
+    },
+    {
+      "profile": "finance",
+      "type": "admin",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 57,
+      "prepWins": 76,
+      "timeouts": 0,
+      "rate": 56.99999999999999
+    },
+    {
+      "profile": "finance",
+      "type": "admin",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 64,
+      "prepWins": 98,
+      "timeouts": 0,
+      "rate": 64
+    },
+    {
+      "profile": "finance",
+      "type": "admin",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 69,
+      "prepWins": 99,
+      "timeouts": 0,
+      "rate": 69
+    },
+    {
+      "profile": "finance",
+      "type": "regional",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 91,
+      "prepWins": 86,
+      "timeouts": 0,
+      "rate": 91
+    },
+    {
+      "profile": "finance",
+      "type": "regional",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 92,
+      "prepWins": 80,
+      "timeouts": 0,
+      "rate": 92
+    },
+    {
+      "profile": "finance",
+      "type": "regional",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 60,
+      "prepWins": 96,
+      "timeouts": 0,
+      "rate": 60
+    },
+    {
+      "profile": "finance",
+      "type": "regional",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 64,
+      "prepWins": 96,
+      "timeouts": 0,
+      "rate": 64
+    },
+    {
+      "profile": "finance",
+      "type": "regional",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 73,
+      "prepWins": 100,
+      "timeouts": 0,
+      "rate": 73
+    },
+    {
+      "profile": "finance",
+      "type": "regional",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 74,
+      "prepWins": 100,
+      "timeouts": 0,
+      "rate": 74
+    },
+    {
+      "profile": "finance",
+      "type": "noir",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 78,
+      "prepWins": 69,
+      "timeouts": 0,
+      "rate": 78
+    },
+    {
+      "profile": "finance",
+      "type": "noir",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 87,
+      "prepWins": 70,
+      "timeouts": 0,
+      "rate": 87
+    },
+    {
+      "profile": "finance",
+      "type": "noir",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 59,
+      "prepWins": 89,
+      "timeouts": 0,
+      "rate": 59
+    },
+    {
+      "profile": "finance",
+      "type": "noir",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 68,
+      "prepWins": 86,
+      "timeouts": 0,
+      "rate": 68
+    },
+    {
+      "profile": "finance",
+      "type": "noir",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 67,
+      "prepWins": 97,
+      "timeouts": 0,
+      "rate": 67
+    },
+    {
+      "profile": "finance",
+      "type": "noir",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 80,
+      "prepWins": 99,
+      "timeouts": 0,
+      "rate": 80
+    },
+    {
+      "profile": "finance",
+      "type": "economic",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 75,
+      "prepWins": 68,
+      "timeouts": 0,
+      "rate": 75
+    },
+    {
+      "profile": "finance",
+      "type": "economic",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 70,
+      "prepWins": 57,
+      "timeouts": 0,
+      "rate": 70
+    },
+    {
+      "profile": "finance",
+      "type": "economic",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 54,
+      "prepWins": 89,
+      "timeouts": 0,
+      "rate": 54
+    },
+    {
+      "profile": "finance",
+      "type": "economic",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 54,
+      "prepWins": 81,
+      "timeouts": 0,
+      "rate": 54
+    },
+    {
+      "profile": "finance",
+      "type": "economic",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 69,
+      "prepWins": 97,
+      "timeouts": 0,
+      "rate": 69
+    },
+    {
+      "profile": "finance",
+      "type": "economic",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 71,
+      "prepWins": 97,
+      "timeouts": 0,
+      "rate": 71
+    },
+    {
+      "profile": "public",
+      "type": "admin",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 56,
+      "prepWins": 71,
+      "timeouts": 0,
+      "rate": 56.00000000000001
+    },
+    {
+      "profile": "public",
+      "type": "admin",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 58,
+      "prepWins": 70,
+      "timeouts": 0,
+      "rate": 57.99999999999999
+    },
+    {
+      "profile": "public",
+      "type": "admin",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 56,
+      "prepWins": 83,
+      "timeouts": 0,
+      "rate": 56.00000000000001
+    },
+    {
+      "profile": "public",
+      "type": "admin",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 60,
+      "prepWins": 82,
+      "timeouts": 0,
+      "rate": 60
+    },
+    {
+      "profile": "public",
+      "type": "admin",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 48,
+      "prepWins": 98,
+      "timeouts": 0,
+      "rate": 48
+    },
+    {
+      "profile": "public",
+      "type": "admin",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 63,
+      "prepWins": 96,
+      "timeouts": 0,
+      "rate": 63
+    },
+    {
+      "profile": "public",
+      "type": "regional",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 79,
+      "prepWins": 86,
+      "timeouts": 0,
+      "rate": 79
+    },
+    {
+      "profile": "public",
+      "type": "regional",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 77,
+      "prepWins": 80,
+      "timeouts": 0,
+      "rate": 77
+    },
+    {
+      "profile": "public",
+      "type": "regional",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 85,
+      "prepWins": 96,
+      "timeouts": 0,
+      "rate": 85
+    },
+    {
+      "profile": "public",
+      "type": "regional",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 83,
+      "prepWins": 96,
+      "timeouts": 0,
+      "rate": 83
+    },
+    {
+      "profile": "public",
+      "type": "regional",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 69,
+      "prepWins": 100,
+      "timeouts": 0,
+      "rate": 69
+    },
+    {
+      "profile": "public",
+      "type": "regional",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 68,
+      "prepWins": 100,
+      "timeouts": 0,
+      "rate": 68
+    },
+    {
+      "profile": "public",
+      "type": "noir",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 56,
+      "prepWins": 69,
+      "timeouts": 0,
+      "rate": 56.00000000000001
+    },
+    {
+      "profile": "public",
+      "type": "noir",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 76,
+      "prepWins": 88,
+      "timeouts": 0,
+      "rate": 76
+    },
+    {
+      "profile": "public",
+      "type": "noir",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 65,
+      "prepWins": 89,
+      "timeouts": 0,
+      "rate": 65
+    },
+    {
+      "profile": "public",
+      "type": "noir",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 84,
+      "prepWins": 95,
+      "timeouts": 0,
+      "rate": 84
+    },
+    {
+      "profile": "public",
+      "type": "noir",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 47,
+      "prepWins": 97,
+      "timeouts": 0,
+      "rate": 47
+    },
+    {
+      "profile": "public",
+      "type": "noir",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 72,
+      "prepWins": 100,
+      "timeouts": 0,
+      "rate": 72
+    },
+    {
+      "profile": "public",
+      "type": "economic",
+      "prep": "policy",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 57,
+      "prepWins": 68,
+      "timeouts": 0,
+      "rate": 56.99999999999999
+    },
+    {
+      "profile": "public",
+      "type": "economic",
+      "prep": "policy",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 62,
+      "prepWins": 67,
+      "timeouts": 0,
+      "rate": 62
+    },
+    {
+      "profile": "public",
+      "type": "economic",
+      "prep": "media",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 60,
+      "prepWins": 89,
+      "timeouts": 0,
+      "rate": 60
+    },
+    {
+      "profile": "public",
+      "type": "economic",
+      "prep": "media",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 57,
+      "prepWins": 87,
+      "timeouts": 0,
+      "rate": 56.99999999999999
+    },
+    {
+      "profile": "public",
+      "type": "economic",
+      "prep": "party",
+      "rebuilt": false,
+      "total": 100,
+      "wins": 56,
+      "prepWins": 97,
+      "timeouts": 0,
+      "rate": 56.00000000000001
+    },
+    {
+      "profile": "public",
+      "type": "economic",
+      "prep": "party",
+      "rebuilt": true,
+      "total": 100,
+      "wins": 61,
+      "prepWins": 94,
+      "timeouts": 0,
+      "rate": 61
+    }
+  ]
+}

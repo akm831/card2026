@@ -1,10 +1,10 @@
 {
   "name": "kasumigaseki-card-battle",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "private": true,
   "description": "政治・行政を題材にしたカードバトル試作",
   "scripts": {
-    "test": "node tests/check_v05.cjs && node tests/check_v06.cjs && node tests/check_v07.cjs && node tests/check_v08.cjs && node tests/check_v09.cjs && node tests/check_v10.cjs && node tests/check_v10_equivalence.cjs && node tests/check_v11.cjs && node tests/check_v12.cjs && node tests/check_enemy_v12.cjs",
+    "test": "node tests/check_v05.cjs && node tests/check_v06.cjs && node tests/check_v07.cjs && node tests/check_v08.cjs && node tests/check_v09.cjs && node tests/check_v10.cjs && node tests/check_v10_equivalence.cjs && node tests/check_v11.cjs && node tests/check_v12.cjs && node tests/check_enemy_v12.cjs && node tests/check_v13.cjs",
     "balance:v05": "node tests/balance_v05.cjs",
     "balance:v06": "node tests/balance_v06.cjs",
     "balance:v07": "node tests/balance_v07.cjs",
@@ -14,6 +14,8 @@
     "test:hand-rules": "node tests/hand_rules_v10.cjs",
     "balance:v11": "node tests/balance_v11.cjs",
     "compare:draw": "node tests/deck_draw_tradeoff.cjs",
-    "compare:enemy": "node tests/compare_enemy_v12.cjs"
+    "compare:enemy": "node tests/compare_enemy_v12.cjs",
+    "balance:v13": "node tests/balance_v13.cjs",
+    "compare:rebuild": "node tests/rebuild_v13.cjs"
   }
 }
