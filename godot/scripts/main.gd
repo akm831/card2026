@@ -26,7 +26,7 @@ func _ready():
 	var theme = Theme.new()
 	var weighted = FontVariation.new()
 	weighted.base_font = fonts
-	weighted.variation_opentype = {"wght":650}
+	weighted.variation_opentype = {TextServerManager.get_primary_interface().name_to_tag("wght"):700}
 	theme.default_font = weighted
 	theme.default_font_size = 21
 	self.theme = theme
@@ -62,6 +62,8 @@ func text(value: String, parent: Node = body, size: int = 21, color: Color = PAP
 	label.add_theme_font_size_override("font_size",size)
 	label.add_theme_color_override("font_color",color)
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	label.clip_text = true
 	parent.add_child(label)
 	return label
 
@@ -80,6 +82,8 @@ func style(color: Color, border: Color) -> StyleBoxFlat:
 func button(value: String, parent: Node, action: Callable, disabled: bool = false, accent: bool = false) -> Button:
 	var btn = Button.new()
 	btn.text = value
+	btn.clip_text = true
+	btn.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	btn.custom_minimum_size.y = 48
 	btn.add_theme_stylebox_override("normal",style(GOLD if accent else Color("263d49"),GOLD if accent else Color("67808b")))
 	btn.add_theme_stylebox_override("hover",style(Color("365664"),GOLD))
@@ -99,6 +103,7 @@ func row(parent: Node = body) -> HBoxContainer:
 func panel(parent: Node, color: Color = Color("20333f")) -> VBoxContainer:
 	var p = PanelContainer.new()
 	p.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	p.size_flags_stretch_ratio = 1.0
 	p.add_theme_stylebox_override("panel",style(color,Color("526d79")))
 	parent.add_child(p)
 	var box = VBoxContainer.new()
@@ -160,8 +165,10 @@ func render_battle():
 	var b = game.b
 	if selected >= b.hand.size(): selected = -1; targeting = false
 	var header = row()
+	header.name = "BattleHeader"
 	text("政局の手札 / 国会決戦",header,25,GOLD)
-	text("第%dターン  コスト%d/3  山札%d / 捨て札%d" % [b.turn,b.energy,b.pile.size(),b.discard.size()],header,22)
+	var stats = text("第%dターン  コスト%d/3  山札%d / 捨て札%d" % [b.turn,b.energy,b.pile.size(),b.discard.size()],header,22)
+	stats.max_lines_visible = 2
 	button("設定",header,show_settings)
 	var arena = row()
 	arena.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -218,7 +225,7 @@ func render_battle():
 		text("手札をタップして選択",description,23,GOLD)
 		text("説明を確認して「使用」。人物をタップすると能力と配置解除を表示。",description,20)
 	var hand = row()
-	hand.custom_minimum_size.y = 152
+	hand.custom_minimum_size.y = 140
 	# Overflow cards remain individually reachable without shrinking every card.
 	var hand_scroll = ScrollContainer.new()
 	hand_scroll.name = "HandOverflow"
@@ -234,7 +241,7 @@ func render_battle():
 		var c = game.card(b.hand[i])
 		var holder = Button.new()
 		holder.name = "HandCard%d" % i
-		holder.custom_minimum_size = Vector2(166,140)
+		holder.custom_minimum_size = Vector2(156,128)
 		holder.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		holder.add_theme_stylebox_override("normal",style(PAPER,GOLD if selected == i else Color("71838b")))
 		holder.add_theme_stylebox_override("hover",style(Color("fff0cf"),GOLD))
@@ -261,11 +268,16 @@ func render_battle():
 		content.add_child(art)
 		text(game.data.attributes[c.aff]+" / "+{"attack":"攻撃","defense":"防御","prep":"準備","disrupt":"妨害","person":"人物"}.get(c.type,"負担"),content,17,INK)
 		for child in content.get_children(): child.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var status_row = row()
 	var actions = row()
+	actions.name = "BattleActions"
 	var status = game.result if game.done else ("手札超過：カードを選んで捨てる" if b.hand.size() > 7 else notice)
-	var status_label = text(status,actions,18,GOLD)
-	status_label.max_lines_visible = 2
+	var status_label = text(status,status_row,18,GOLD)
+	status_label.max_lines_visible = 1
 	button("ログ",actions,show_log)
+	var spacer = Control.new()
+	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	actions.add_child(spacer)
 	button("1手戻す",actions,func(): undo_action(false),game.history.is_empty() or game.done)
 	button("ターンを戻す",actions,func(): undo_action(true),game.history.is_empty() or game.done)
 	button("勝利を確定" if b.outcome == "win" else "ターン終了",actions,end_action,game.done or targeting or b.hand.size() > 7 and b.outcome == null,true)

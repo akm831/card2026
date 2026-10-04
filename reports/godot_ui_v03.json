@@ -1,0 +1,25 @@
+{
+  "actualFontWeight": 700,
+  "oldStringTagCoordinates": {},
+  "numericTagCoordinates": {
+    "2003265652": 700
+  },
+  "layoutGeometryPassed": true,
+  "viewports": [
+    "1280x720",
+    "1560x720",
+    "1536x709"
+  ],
+  "scenarios": [
+    "7 cards/3 allies/3 forecasts",
+    "selected card",
+    "long status",
+    "victory confirm",
+    "overflow discard"
+  ],
+  "uiSmokePassed": true,
+  "battleEngineChanged": false,
+  "deviceVisualVerification": false,
+  "apkSignatureVerified": true,
+  "apkSha256": "1083b24d9d918e4336f9b42fd2e14bb01ae31d710927262eac2f826e33d6e641"
+}

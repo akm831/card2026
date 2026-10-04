@@ -12,7 +12,13 @@ func run():
 	var scene = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	await process_frame
-	for viewport_size in [Vector2i(1280,720),Vector2i(1560,720)]:
+	var ts = TextServerManager.get_primary_interface()
+	var font = scene.theme.default_font
+	font.get_string_size("資料答弁",HORIZONTAL_ALIGNMENT_LEFT,-1,24)
+	for rid in font.get_rids():
+		if ts.font_get_variation_coordinates(rid).get(ts.name_to_tag("wght"),0) != 700:
+			failures.append("Font weight did not reach rendering server")
+	for viewport_size in [Vector2i(1280,720),Vector2i(1560,720),Vector2i(1536,709)]:
 		root.size = viewport_size
 		scene.start_battle("admin")
 		# Discover representative people from data rather than depend on display names.
@@ -25,9 +31,18 @@ func run():
 		scene.render_battle()
 		for frame in range(5): await process_frame
 		check_screen(scene)
+		scene.notice = "長い案内文を表示する場面でも操作ボタンが画面外へ押し出されないことを確認します。".repeat(3)
+		scene.render_battle()
+		for frame in range(5): await process_frame
+		check_screen(scene)
 		scene.select_card(0)
 		for frame in range(5): await process_frame
 		check_screen(scene)
+		scene.game.b.outcome = "win"
+		scene.render_battle()
+		for frame in range(5): await process_frame
+		check_screen(scene)
+		scene.game.b.outcome = null
 		if scene.selected != 0 or not scene.game.history.is_empty(): failures.append("Card selection unexpectedly played a card")
 		scene.game.b.hand.append(people[1])
 		scene.render_battle()
@@ -42,5 +57,5 @@ func run():
 		for failure in failures: push_error(failure)
 		quit(1)
 	else:
-		print("PASS: 7 cards, 3 allies, 3 forecasts, selection/detail, overflow discard, footer bounds at 1280x720 and 1560x720 (geometry only).")
+		print("PASS: 7 cards, 3 allies, 3 forecasts, selection/detail, overflow discard, footer bounds at three landscape sizes; actual font weight700 and long status/victory (geometry only).")
 		quit(0)
