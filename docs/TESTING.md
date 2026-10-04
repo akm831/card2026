@@ -149,3 +149,11 @@ HP30、指定2属性構成、成長官僚のターン開始防御、停止中の
 別乱数：`PROFILES=intro TRIALS=300 SEED_BASE=246810 REPORT_PATH=reports/balance_v13_holdout.json node tests/balance_v13.cjs`（7,200案件）。`npm run compare:rebuild`は実戦で初期デッキと少数交換を同じ条件で比較（4,800案件）。実戦1で選択報酬1枚以内、実戦2で2枚以内＋初期所持カードの追加コピーだけを用いる。ランダム報酬と完全収集を仮定しない。
 
 v13回帰は段階解放、プロファイル構成/置換枚数、報酬選択/未選択時の進行停止/二重受取/全収集時の交換、ヒントと新UIのハンドラを含む。人間の初見勝率・描画・面白さは別に確認する。
+
+## v14 地域＋報道
+
+`npm run ablate:regional`は旧v13の人物3要因と通常補充/予告対策を個別に除去。報告を分けた再現は `VARIANTS=baseline,noReporterDraw,noOrganizerHeal,noGrowthAttack node tests/ablate_regional_v13.cjs` と `VARIANTS=baseline,noCardDraw,noForecastControl REPORT_PATH=reports/ablate_regional_cards_v13.json node tests/ablate_regional_v13.cjs`。
+
+`npm run balance:v14`は全初期デッキ/3段階/3準備/2方策で検証。予約ドローを評価する方策を使うため、旧版の比較も `VERSION=v13 TYPES=regional TRIALS=200 REPORT_PATH=reports/regional_baseline_v13.json node tests/balance_v14.cjs` で同じ方策を適用する。別乱数入門確認は `TYPES=regional PROFILES=intro TRIALS=300 SEED_BASE=246810 REPORT_PATH=reports/regional_v14_holdout.json node tests/balance_v14.cjs`。
+
+回帰は人物の介入/成長/攻撃で共通枠を使うこと、ターン切替/停止/Undo、記者説明の当ターン未補充と次ターン解決、予定ドロー表示、裏取りコスト2を含む。各人物のドローを単独除去する実験は、合計上限の採用テストとは区別する。詳細はREGIONAL_BALANCE_V14.md。
