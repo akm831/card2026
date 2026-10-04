@@ -161,3 +161,7 @@ v13回帰は段階解放、プロファイル構成/置換枚数、報酬選択/
 ## v14：収集デッキ比較
 
 `npm run compare:collection`。同数の候補探索と独立した測定乱数で、初期所持＋選択2枚／初期2属性全所持を比較。初期比較は `CANDIDATES=1 TRAIN=1 BUDGETS=starter REPORT_PATH=reports/collection_starters_v14.json node tests/collection_v14.cjs`。方法・判断・限界は `COLLECTION_BALANCE_V14.md`。ゲーム本体は変更せず、測定21,600案件の打ち切り0。
+
+## v15：実報酬・連続進行
+
+`npm run compare:campaign`。第1ステージを実際に突破した試行だけに実報酬を付与し、第2ステージを初期／初期所持編成／報酬込み編成で比較。単純使用・予告評価を分離。選定60回と測定300回の乱数は別。最終測定18,516案件、変更前の同条件比較9,858案件、測定打ち切り0。具体的結果と再現は `CAMPAIGN_V15.md`。

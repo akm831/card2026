@@ -1,0 +1,2549 @@
+{
+  "sourceSha256": "98258b262e7b87a061742375f6cc313a3795c51c8588c359233a165f41795120",
+  "version": "v15",
+  "training": 60,
+  "trials": 300,
+  "pressureOverride": null,
+  "broadScrutinyOverride": false,
+  "method": "First stage simple bot, prep cycles equally; actual native random2 reward and duplicate tokens. One native chosen reward based on fixed target deficits; no exchanges (at most2 duplicate tokens). Four templates per starter chosen on disjoint training seeds by stage2 tactical averaged over3 preparations. No holdout-dependent build search. Stage2 conditional on first-stage success; same sampled rewards and seeds across modes. Unchanged=starter; owned=template adapted to original holdings; rewards=template adapted to earned holdings. Missing copies replaced with legal starter cards. Full prep+final both stages, no human/browser test. Same second-stage deck during preparation/final.",
+  "selection": [
+    {
+      "type": "admin",
+      "scores": [
+        {
+          "index": 2,
+          "wins": 109,
+          "total": 144,
+          "timeout": 0
+        },
+        {
+          "index": 1,
+          "wins": 107,
+          "total": 144,
+          "timeout": 0
+        },
+        {
+          "index": 0,
+          "wins": 97,
+          "total": 144,
+          "timeout": 0
+        },
+        {
+          "index": 3,
+          "wins": 89,
+          "total": 144,
+          "timeout": 0
+        }
+      ],
+      "target": [
+        "answer",
+        "answer",
+        "procedure",
+        "procedure",
+        "budgetReview",
+        "planExplain",
+        "delay",
+        "delay",
+        "leader",
+        "lobby",
+        "official",
+        "debate",
+        "debate",
+        "protect",
+        "protect",
+        "staffChange",
+        "planExplain",
+        "leader",
+        "budgetReview",
+        "staffChange"
+      ]
+    },
+    {
+      "type": "regional",
+      "scores": [
+        {
+          "index": 2,
+          "wins": 117,
+          "total": 147,
+          "timeout": 0
+        },
+        {
+          "index": 1,
+          "wins": 111,
+          "total": 147,
+          "timeout": 0
+        },
+        {
+          "index": 3,
+          "wins": 110,
+          "total": 147,
+          "timeout": 0
+        },
+        {
+          "index": 0,
+          "wins": 107,
+          "total": 147,
+          "timeout": 0
+        }
+      ],
+      "target": [
+        "voice",
+        "report",
+        "brief",
+        "brief",
+        "publicQuestion",
+        "investigate",
+        "openDebate",
+        "counter",
+        "organizer",
+        "voice",
+        "routeExplain",
+        "network",
+        "network",
+        "routeExplain",
+        "return",
+        "localPetition",
+        "petition",
+        "organizer",
+        "localPetition",
+        "publicQuestion"
+      ]
+    },
+    {
+      "type": "noir",
+      "scores": [
+        {
+          "index": 2,
+          "wins": 99,
+          "total": 120,
+          "timeout": 0
+        },
+        {
+          "index": 3,
+          "wins": 94,
+          "total": 120,
+          "timeout": 0
+        },
+        {
+          "index": 1,
+          "wins": 88,
+          "total": 120,
+          "timeout": 0
+        },
+        {
+          "index": 0,
+          "wins": 84,
+          "total": 120,
+          "timeout": 0
+        }
+      ],
+      "target": [
+        "whip",
+        "lobby",
+        "broker",
+        "debate",
+        "protect",
+        "protect",
+        "staffChange",
+        "whip",
+        "leader",
+        "force",
+        "force",
+        "deal",
+        "deal",
+        "silence",
+        "debate",
+        "fulfillDeal",
+        "silence",
+        "broker",
+        "fulfillDeal",
+        "staffChange"
+      ]
+    },
+    {
+      "type": "economic",
+      "scores": [
+        {
+          "index": 2,
+          "wins": 98,
+          "total": 135,
+          "timeout": 0
+        },
+        {
+          "index": 1,
+          "wins": 91,
+          "total": 135,
+          "timeout": 0
+        },
+        {
+          "index": 3,
+          "wins": 90,
+          "total": 135,
+          "timeout": 0
+        },
+        {
+          "index": 0,
+          "wins": 88,
+          "total": 135,
+          "timeout": 0
+        }
+      ],
+      "target": [
+        "projectReview",
+        "answer",
+        "procedure",
+        "procedure",
+        "clean",
+        "clean",
+        "economist",
+        "delay",
+        "official",
+        "invest",
+        "invest",
+        "efficiency",
+        "planExplain",
+        "reserve",
+        "official",
+        "fund",
+        "fund",
+        "economist",
+        "budgetReview",
+        "budgetReview"
+      ]
+    }
+  ],
+  "firstRows": [
+    {
+      "type": "admin",
+      "total": 300,
+      "wins": 243,
+      "timeouts": 0,
+      "rate": 81,
+      "randomNewCounts": [
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "type": "regional",
+      "total": 300,
+      "wins": 231,
+      "timeouts": 0,
+      "rate": 77,
+      "randomNewCounts": [
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "noir",
+      "total": 300,
+      "wins": 238,
+      "timeouts": 0,
+      "rate": 79.33333333333333,
+      "randomNewCounts": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "economic",
+      "total": 300,
+      "wins": 250,
+      "timeouts": 0,
+      "rate": 83.33333333333333,
+      "randomNewCounts": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "type": "admin",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 243,
+      "wins": 180,
+      "prepWins": 163,
+      "timeouts": 0,
+      "outcomes": "111111111111110011011011001101111111000111111011111111100111011010111111111011001110111111011111011110111101010111110111101000111111011111111001111101100101011101010111101101110100110111111011000011101111100110011011101110111111011111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,official,lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,budgetReview,staffChange": 243
+      },
+      "rate": 74.07407407407408
+    },
+    {
+      "type": "admin",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 243,
+      "wins": 199,
+      "prepWins": 197,
+      "timeouts": 0,
+      "outcomes": "111111111111101111111011011111111011100110111011111111100110111111111111111011111110111111111111111111111111000111111011111000111111111110011101111011111100111111111111111111111110110110110011100110011111100011011111011111101111011111111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 81.89300411522633
+    },
+    {
+      "type": "admin",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 243,
+      "wins": 199,
+      "prepWins": 197,
+      "timeouts": 0,
+      "outcomes": "111111111111101111111011011111111011100110111011111111100110111111111111111011111110111111111111111111111111000111111011111000111111111110011101111011111100111111111111111111111110110110110011100110011111100011011111011111101111011111111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 81.89300411522633
+    },
+    {
+      "type": "admin",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 243,
+      "wins": 189,
+      "prepWins": 172,
+      "timeouts": 0,
+      "outcomes": "011111111111110011111011001111101111100111101011111111111111011010111111111111011110111111111101011100111111010111111011111110100101111110111101101111101101011101111101101101111101011111111011000011101111101111001111101111111100011101111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,official,lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,budgetReview,staffChange": 243
+      },
+      "rate": 77.77777777777777
+    },
+    {
+      "type": "admin",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 243,
+      "wins": 216,
+      "prepWins": 200,
+      "timeouts": 0,
+      "outcomes": "111111111111100111111011011111111111110110111111111101101111111111111111111111111100111111111111111111111111101111111111101110101111111110111111111011111111111111111111111111111110101110110011110110111111111011011111111110111111111111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 88.88888888888889
+    },
+    {
+      "type": "admin",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 243,
+      "wins": 216,
+      "prepWins": 200,
+      "timeouts": 0,
+      "outcomes": "111111111111100111111011011111111111110110111111111101101111111111111111111111111100111111111111111111111111101111111111101110101111111110111111111011111111111111111111111111111110101110110011110110111111111011011111111110111111111111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 88.88888888888889
+    },
+    {
+      "type": "admin",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 243,
+      "wins": 128,
+      "prepWins": 197,
+      "timeouts": 0,
+      "outcomes": "101111110101110101011010001100011110000010011011111001000101010011011010100000001100111101011101011100111000010111010001111000100100111111001001011001110001011100010000001101011100110011111011000010101011100000110011111000110001011111110110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,official,lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,budgetReview,staffChange": 243
+      },
+      "rate": 52.674897119341566
+    },
+    {
+      "type": "admin",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 243,
+      "wins": 131,
+      "prepWins": 217,
+      "timeouts": 0,
+      "outcomes": "111011110001100001111001000100011011100010111011110001000101000001110110100001011000111101011110011001111111000011001011011000101101111110101101111000001000011110010111011110011110100000100011100010011011100011101111011000000001011111111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 53.90946502057613
+    },
+    {
+      "type": "admin",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 243,
+      "wins": 131,
+      "prepWins": 217,
+      "timeouts": 0,
+      "outcomes": "111011110001100001111001000100011011100010111011110001000101000001110110100001011000111101011110011001111111000011001011011000101101111110101101111000001000011110010111011110011110100000100011100010011011100011101111011000000001011111111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 53.90946502057613
+    },
+    {
+      "type": "admin",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 243,
+      "wins": 125,
+      "prepWins": 201,
+      "timeouts": 0,
+      "outcomes": "000010010001110101011010001010001111110010011011100001000100011010011010101000001100111101110101011100111010010111110001111010100001111110110101001010101001011100000000001101011101000101111010000010101011101100100111101010111000001111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,official,lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,budgetReview,staffChange": 243
+      },
+      "rate": 51.440329218106996
+    },
+    {
+      "type": "admin",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 243,
+      "wins": 154,
+      "prepWins": 220,
+      "timeouts": 0,
+      "outcomes": "011011110001100101111011000110011111100110101011111111000101000111001101111001001100111011111111011111111010100111000111111000101111111110011101111010001001011110110111011111011110001100100010100010001010111101101111111010100011001111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 63.37448559670782
+    },
+    {
+      "type": "admin",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 243,
+      "wins": 154,
+      "prepWins": 220,
+      "timeouts": 0,
+      "outcomes": "011011110001100101111011000110011111100110101011111111000101000111001101111001001100111011111111011111111010100111000111111000101111111110011101111010001001011110110111011111011110001100100010100010001010111101101111111010100011001111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 63.37448559670782
+    },
+    {
+      "type": "admin",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 243,
+      "wins": 140,
+      "prepWins": 224,
+      "timeouts": 0,
+      "outcomes": "111110111101110011001011001100010110010011111011111001000101110011011010100001001100111111011101011100111011011101110101101000101101101111110001101101111001011100010000001101000100110110111110000011100011110000111001101010110001011110111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,official,lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,budgetReview,staffChange": 243
+      },
+      "rate": 57.61316872427984
+    },
+    {
+      "type": "admin",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 243,
+      "wins": 162,
+      "prepWins": 231,
+      "timeouts": 0,
+      "outcomes": "111010111001100011111011001100010011100110111011111001000101100111101110101001011100111111010111101111111111011011011011111000101111111110111001111000101001111110010111111111011110110100110111100110011011101011111110011010001011011111111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 66.66666666666667
+    },
+    {
+      "type": "admin",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 243,
+      "wins": 162,
+      "prepWins": 231,
+      "timeouts": 0,
+      "outcomes": "111010111001100011111011001100010011100110111011111001000101100111101110101001011100111111010111101111111111011011011011111000101111111110111001111000101001111110010111111111011110110100110111100110011011101011111110011010001011011111111110101",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 66.66666666666667
+    },
+    {
+      "type": "admin",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 243,
+      "wins": 155,
+      "prepWins": 231,
+      "timeouts": 0,
+      "outcomes": "010010111100110011011011111011001111010111111011110001010101111111011010101000001100111111010100111110111010010111111101111100111101111110110101001011101001011100011000001101001101010101111100000111100011101100111011111111111001001111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,official,lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,budgetReview,staffChange": 243
+      },
+      "rate": 63.78600823045267
+    },
+    {
+      "type": "admin",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 243,
+      "wins": 181,
+      "prepWins": 234,
+      "timeouts": 0,
+      "outcomes": "111011111001100011111011011110111111110110111011111101011101101111001101111000011110111111010111101011111111011111011111111100111111111110111101111010101001111110011111111101011110110000110111100010001010111111101111111110111111001111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 74.48559670781893
+    },
+    {
+      "type": "admin",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 243,
+      "wins": 181,
+      "prepWins": 234,
+      "timeouts": 0,
+      "outcomes": "111011111001100011111011011110111111110110111011111101011101101111001101111000011110111111010111101011111111011111011111111100111111111110111101111010101001111110011111111101011110110000110111100010001010111111101111111110111111001111111110111",
+      "choices": {
+        "clean": 243
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,budgetReview,planExplain,delay,delay,leader,lobby,official,debate,debate,protect,protect,staffChange,planExplain,leader,budgetReview,staffChange": 243
+      },
+      "rate": 74.48559670781893
+    },
+    {
+      "type": "regional",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 231,
+      "wins": 140,
+      "prepWins": 137,
+      "timeouts": 0,
+      "outcomes": "000011011111011000010111111101000001110000011011010101111011111111110010101101101001110111011011111110111011111000111101111011011111011110111100111010110011100111000100010011011010100111110100100101001010100110110101110111101010000",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "report,report,brief,brief,publicQuestion,investigate,openDebate,counter,reporter,voice,voice,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 60.60606060606061
+    },
+    {
+      "type": "regional",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 231,
+      "wins": 186,
+      "prepWins": 173,
+      "timeouts": 0,
+      "outcomes": "101011011111011100011101111111011101110010111111111111111111111111110111111111101011110111011011101110111011111100111111111111011111111110111110111110110111111111110010011110011011101111111110100111101011110110111111111111111111101",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 80.51948051948052
+    },
+    {
+      "type": "regional",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 231,
+      "wins": 186,
+      "prepWins": 173,
+      "timeouts": 0,
+      "outcomes": "101011011111011100011101111111011101110010111111111111111111111111110111111111101011110111011011101110111011111100111111111111011111111110111110111110110111111111110010011110011011101111111110100111101011110110111111111111111111101",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 80.51948051948052
+    },
+    {
+      "type": "regional",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 231,
+      "wins": 204,
+      "prepWins": 194,
+      "timeouts": 0,
+      "outcomes": "101111011011111011011111111111011111010111011111010111111111011111111111111111101111111111011011111110111111111101111111111111111111111111111100111110111111111111111111111110111111111111111110111111111111111110110101111111101111110",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "report,report,brief,brief,publicQuestion,investigate,openDebate,counter,reporter,voice,voice,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 88.31168831168831
+    },
+    {
+      "type": "regional",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 231,
+      "wins": 215,
+      "prepWins": 213,
+      "timeouts": 0,
+      "outcomes": "111111111011111011011101111111011111110111111111111111111111111111111111111111111111111111111011101110111111111111111111111111111111111111111110111110111111111111111111111110111111110111111111111111111111111110011111111111101111111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 93.07359307359307
+    },
+    {
+      "type": "regional",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 231,
+      "wins": 215,
+      "prepWins": 213,
+      "timeouts": 0,
+      "outcomes": "111111111011111011011101111111011111110111111111111111111111111111111111111111111111111111111011101110111111111111111111111111111111111111111110111110111111111111111111111110111111110111111111111111111111111110011111111111101111111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 93.07359307359307
+    },
+    {
+      "type": "regional",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 231,
+      "wins": 67,
+      "prepWins": 181,
+      "timeouts": 0,
+      "outcomes": "001001000001000000000010111001000001011000010000010000001011000100000000011100100000000111010010001100000000111000111101001001011110000000110000100000000001000101000000001011011100100101010000000001001000100000000100010100101010000",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "report,report,brief,brief,publicQuestion,investigate,openDebate,counter,reporter,voice,voice,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 29.004329004329005
+    },
+    {
+      "type": "regional",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 231,
+      "wins": 114,
+      "prepWins": 207,
+      "timeouts": 0,
+      "outcomes": "001001001001011000000100111111011101111011010011010111101111001010000011011100100001001111010010001100001011111010111111101001111111001010010000100100000001101101010010011010011100100101011000000011001000100110001110011101101011001",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 49.35064935064935
+    },
+    {
+      "type": "regional",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 231,
+      "wins": 114,
+      "prepWins": 207,
+      "timeouts": 0,
+      "outcomes": "001001001001011000000100111111011101111011010011010111101111001010000011011100100001001111010010001100001011111010111111101001111111001010010000100100000001101101010010011010011100100101011000000011001000100110001110011101101011001",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 49.35064935064935
+    },
+    {
+      "type": "regional",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 231,
+      "wins": 134,
+      "prepWins": 220,
+      "timeouts": 0,
+      "outcomes": "110001011011001010000110111011000111011011011011010111001111011000100101111101100011101111010010001100000011110011111111111101111111101000110000100010000001111101111111110010011100110101011000010011001111111101110100010111101011100",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "report,report,brief,brief,publicQuestion,investigate,openDebate,counter,reporter,voice,voice,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 58.00865800865801
+    },
+    {
+      "type": "regional",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 231,
+      "wins": 152,
+      "prepWins": 228,
+      "timeouts": 0,
+      "outcomes": "000101011011001010000100111111011111110011011111010011011111011011100011111101110111001111110010101100001111110101111111111001111111101001010100100110000101111101111111111010011100110111011100010101101111111011011110010111101011111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 65.80086580086581
+    },
+    {
+      "type": "regional",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 231,
+      "wins": 152,
+      "prepWins": 228,
+      "timeouts": 0,
+      "outcomes": "000101011011001010000100111111011111110011011111010011011111011011100011111101110111001111110010101100001111110101111111111001111111101001010100100110000101111101111111111010011100110111011100010101101111111011011110010111101011111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 65.80086580086581
+    },
+    {
+      "type": "regional",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 231,
+      "wins": 119,
+      "prepWins": 213,
+      "timeouts": 0,
+      "outcomes": "101001001001010010010110111101100111011011010010000010011011011110100100111110100011000111010010001110010000111000111111001111111110011010111000100000000001010111000111110011011111101101010000000011001001100110101101110100011011010",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "report,report,brief,brief,publicQuestion,investigate,openDebate,counter,reporter,voice,voice,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 51.515151515151516
+    },
+    {
+      "type": "regional",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 231,
+      "wins": 152,
+      "prepWins": 221,
+      "timeouts": 0,
+      "outcomes": "101001001001011010010110111111011111111011010011100111111111011110100111111110100011101111010011001110001011111010111111101011111111111010111010100110000001111101010110011011111111100101011000001111101100110110101111111101011011011",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 65.80086580086581
+    },
+    {
+      "type": "regional",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 231,
+      "wins": 152,
+      "prepWins": 221,
+      "timeouts": 0,
+      "outcomes": "101001001001011010010110111111011111111011010011100111111111011110100111111110100011101111010011001110001011111010111111101011111111111010111010100110000001111101010110011011111111100101011000001111101100110110101111111101011011011",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 65.80086580086581
+    },
+    {
+      "type": "regional",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 231,
+      "wins": 175,
+      "prepWins": 225,
+      "timeouts": 0,
+      "outcomes": "111001011001011010011110111111001111111011011011001110111111011110101111111110100111111111010011101110110011110011111111111111111110111011111010100010101111111101111111110011111111110111010000011111101111111101111101111111111011111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "report,report,brief,brief,publicQuestion,investigate,openDebate,counter,reporter,voice,voice,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 75.75757575757575
+    },
+    {
+      "type": "regional",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 231,
+      "wins": 193,
+      "prepWins": 230,
+      "timeouts": 0,
+      "outcomes": "111101011011011010010111111111111111111011011011100111111111011111101111111110110111101111110011101110111111110111111111111111111111111011111110100110101111111101111111111011111111111111011010011011101111111111111111111111111011111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 83.54978354978356
+    },
+    {
+      "type": "regional",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 231,
+      "wins": 193,
+      "prepWins": 230,
+      "timeouts": 0,
+      "outcomes": "111101011011011010010111111111111111111011011011100111111111011111101111111110110111101111110011101110111111110111111111111111111111111011111110100110101111111101111111111011111111111111011010011011101111111111111111111111111011111",
+      "choices": {
+        "answer": 230,
+        "procedure": 1
+      },
+      "decks": {
+        "voice,report,brief,brief,publicQuestion,investigate,openDebate,counter,organizer,voice,routeExplain,network,network,routeExplain,return,localPetition,petition,organizer,localPetition,publicQuestion": 231
+      },
+      "rate": 83.54978354978356
+    },
+    {
+      "type": "noir",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 238,
+      "wins": 174,
+      "prepWins": 166,
+      "timeouts": 0,
+      "outcomes": "1011101011111111111101111010100000101110110111010101010111111111111111110110110110111111110010101100111111101101111110011111001111011111111110101111011110101001011111111111111101010011111110011011101011011010010100110111111011101011111111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,silence,fulfillDeal,favor,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 73.10924369747899
+    },
+    {
+      "type": "noir",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 238,
+      "wins": 183,
+      "prepWins": 162,
+      "timeouts": 0,
+      "outcomes": "1110111111101111111101111111010110111111111111101101101100011111011111111111110101111111111011111001000111111101111011011111111111011010111110111110101111101011101111001110101101011011011111111011111010011111110110010010111111101110011101",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 76.89075630252101
+    },
+    {
+      "type": "noir",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 238,
+      "wins": 183,
+      "prepWins": 162,
+      "timeouts": 0,
+      "outcomes": "1110111111101111111101111111010110111111111111101101101100011111011111111111110101111111111011111001000111111101111011011111111111011010111110111110101111101011101111001110101101011011011111111011111010011111110110010010111111101110011101",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 76.89075630252101
+    },
+    {
+      "type": "noir",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 238,
+      "wins": 190,
+      "prepWins": 183,
+      "timeouts": 0,
+      "outcomes": "1010111111111111111111111100111101111101010111111101011111110110111111111111111011111001101111111100111110011101111110111111001111110010111110111111111100100101111110111111011101111001101111111011111111011111000111011011111111111011111101",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,silence,fulfillDeal,favor,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 79.83193277310924
+    },
+    {
+      "type": "noir",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 238,
+      "wins": 200,
+      "prepWins": 176,
+      "timeouts": 0,
+      "outcomes": "1110111111111111111111111111111110111111111111011111111111111111011011111111111101111111111111111010011111010100011011111111101111111011110111011110111101101111101110001111111101101111011111111111111110011011110111110110111111111010101111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 84.03361344537815
+    },
+    {
+      "type": "noir",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 238,
+      "wins": 200,
+      "prepWins": 176,
+      "timeouts": 0,
+      "outcomes": "1110111111111111111111111111111110111111111111011111111111111111011011111111111101111111111111111010011111010100011011111111101111111011110111011110111101101111101110001111111101101111011111111111111110011011110111110110111111111010101111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 84.03361344537815
+    },
+    {
+      "type": "noir",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 238,
+      "wins": 114,
+      "prepWins": 193,
+      "timeouts": 0,
+      "outcomes": "1010001011011101101101011100000000100110100000010110000101111001000001100010000110011001110110001000010011100001111110000011101001111110110111001111101000001111010001111101011000010011001111010000101011000111001000110010100001101011001101",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,silence,fulfillDeal,favor,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 47.89915966386555
+    },
+    {
+      "type": "noir",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 238,
+      "wins": 141,
+      "prepWins": 197,
+      "timeouts": 0,
+      "outcomes": "1011100011100111110001111111000101010110111100101101110100111011001001001110111111100011110011111000100110011101110000010001111011111110011110111111111111001111001001000100101101011001001110111011111000000111010110010001110111011000110001",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 59.2436974789916
+    },
+    {
+      "type": "noir",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 238,
+      "wins": 141,
+      "prepWins": 197,
+      "timeouts": 0,
+      "outcomes": "1011100011100111110001111111000101010110111100101101110100111011001001001110111111100011110011111000100110011101110000010001111011111110011110111111111111001111001001000100101101011001001110111011111000000111010110010001110111011000110001",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 59.2436974789916
+    },
+    {
+      "type": "noir",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 238,
+      "wins": 143,
+      "prepWins": 215,
+      "timeouts": 0,
+      "outcomes": "0110101010011010111101011000101001111011110101110000011010101110011110111111010011111000001111111100011100011000111010111101001110111010110110001111110000000101011110110111111100111101001111000111111001010000000011011110101101111011011111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,silence,fulfillDeal,favor,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 60.08403361344538
+    },
+    {
+      "type": "noir",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 238,
+      "wins": 155,
+      "prepWins": 215,
+      "timeouts": 0,
+      "outcomes": "1111111011010101000101111100100000111111101011110011110000111111111001111011111101101011110111110100000100011100111111011011111111111111110110011111110000010110011110001101110111101100011111111111111110000001110101110001110011111000100001",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 65.12605042016807
+    },
+    {
+      "type": "noir",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 238,
+      "wins": 155,
+      "prepWins": 215,
+      "timeouts": 0,
+      "outcomes": "1111111011010101000101111100100000111111101011110011110000111111111001111011111101101011110111110100000100011100111111011011111111111111110110011111110000010110011110001101110111101100011111111111111110000001110101110001110011111000100001",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 65.12605042016807
+    },
+    {
+      "type": "noir",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 238,
+      "wins": 134,
+      "prepWins": 216,
+      "timeouts": 0,
+      "outcomes": "0010001001001001101100011100001010100110110111010111010100101111001011101111000111111011110111001000011011100101001010000011111101011100110111001110111010001101110001111101101100011011101111010011001011000110110000110110100101111011001111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,silence,fulfillDeal,favor,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 56.30252100840336
+    },
+    {
+      "type": "noir",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 238,
+      "wins": 160,
+      "prepWins": 230,
+      "timeouts": 0,
+      "outcomes": "1011101011001111110111111010001100100111111111111111100110111110001011011111111101101011111010111000001110101111111110001001011111011111111111111110111010011110111101111010111110111101001111101111101000000111010100010000110101011000111001",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 67.22689075630252
+    },
+    {
+      "type": "noir",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 238,
+      "wins": 160,
+      "prepWins": 230,
+      "timeouts": 0,
+      "outcomes": "1011101011001111110111111010001100100111111111111111100110111110001011011111111101101011111010111000001110101111111110001001011111011111111111111110111010011110111101111010111110111101001111101111101000000111010100010000110101011000111001",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 67.22689075630252
+    },
+    {
+      "type": "noir",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 238,
+      "wins": 171,
+      "prepWins": 229,
+      "timeouts": 0,
+      "outcomes": "0110111011111010111111011000101111101111110101110101011010111110011111111111111011111011111100111100110111011101001111111101101011111110110110001011111000010101011111110111111100111101001111110101011101010011111011010011110001111111111111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "lobby,lobby,debate,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,silence,fulfillDeal,favor,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 71.84873949579831
+    },
+    {
+      "type": "noir",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 238,
+      "wins": 180,
+      "prepWins": 234,
+      "timeouts": 0,
+      "outcomes": "1111111011101111010101111110100011111110101011111011111111111111111011111011111111111111110111110100101010011110101111011010111111101111110010001111110100110110001011100101111111001111010111111111111110010100110101111111110111111111101111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 75.63025210084034
+    },
+    {
+      "type": "noir",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 238,
+      "wins": 180,
+      "prepWins": 234,
+      "timeouts": 0,
+      "outcomes": "1111111011101111010101111110100011111110101011111011111111111111111011111011111111111111110111110100101010011110101111011010111111101111110010001111110100110110001011100101111111001111010111111111111110010100110101111111110111111111101111",
+      "choices": {
+        "answer": 238
+      },
+      "decks": {
+        "whip,lobby,broker,debate,protect,protect,staffChange,whip,leader,force,force,deal,deal,silence,debate,fulfillDeal,silence,broker,fulfillDeal,staffChange": 238
+      },
+      "rate": 75.63025210084034
+    },
+    {
+      "type": "economic",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 250,
+      "wins": 194,
+      "prepWins": 170,
+      "timeouts": 0,
+      "outcomes": "1111111111011011101101001110101110111111111110001111101111111010011011010011110111111101111111111111111000110110110111101110101111111101111110111011111011101110110101011011110111111111011111011111111010111110111110011110101010101011111111111111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,clean,clean,delay,delay,official,invest,invest,efficiency,efficiency,reserve,reserve,fund,fund,economist,projectReview,budgetReview": 250
+      },
+      "rate": 77.6
+    },
+    {
+      "type": "economic",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 250,
+      "wins": 234,
+      "prepWins": 218,
+      "timeouts": 0,
+      "outcomes": "1111111111111111111111111101111111111111111111010111101111111111111111111111111111111111111111111111111111111111111111111111111110111111111110111111111011111111111111111111111111110111111011011111011111111111110111111111101111111111001011111111111111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,reserve,official,fund,fund,economist,budgetReview,budgetReview,answer": 250
+      },
+      "rate": 93.6
+    },
+    {
+      "type": "economic",
+      "prep": "policy",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 250,
+      "wins": 235,
+      "prepWins": 219,
+      "timeouts": 0,
+      "outcomes": "1111111111111111101111111101111111111111111111111111111111111111111111111111111111111111111111111111111111111101111111101110111111111110111111111011111011011011111111111111111111111111111111111111011111111111111111111111111110111111111110011111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,planExplain,reserve,official,fund,fund,economist,budgetReview,budgetReview": 250
+      },
+      "rate": 94
+    },
+    {
+      "type": "economic",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 250,
+      "wins": 208,
+      "prepWins": 187,
+      "timeouts": 0,
+      "outcomes": "1111111101011111111101011111101110111011101110001111101111111011111101111011110111111111111111111111101110100110111111111110111111111101111111110011111111111110110101111011111111111111011101111111111000111011111011011110101111111011111111011111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,clean,clean,delay,delay,official,invest,invest,efficiency,efficiency,reserve,reserve,fund,fund,economist,projectReview,budgetReview": 250
+      },
+      "rate": 83.2
+    },
+    {
+      "type": "economic",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 250,
+      "wins": 240,
+      "prepWins": 234,
+      "timeouts": 0,
+      "outcomes": "1111111111111111111101101111111111111111111111110111101111111111111111111111111111111111111111111111111111111111111111111111111111111111111110111111111111111111110111111111111111111111111111011111111111111111111111111111111111111111111001011111111111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,reserve,official,fund,fund,economist,budgetReview,budgetReview,answer": 250
+      },
+      "rate": 96
+    },
+    {
+      "type": "economic",
+      "prep": "policy",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 250,
+      "wins": 244,
+      "prepWins": 228,
+      "timeouts": 0,
+      "outcomes": "1111111111111111111111111111111111111111101111111111111101111111111111111111111111111111111111111111111111111111111111111110011111111111111111111111111111111111111111111111111111111111101111111111111111111111111111111111111111111111111111111111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,planExplain,reserve,official,fund,fund,economist,budgetReview,budgetReview": 250
+      },
+      "rate": 97.6
+    },
+    {
+      "type": "economic",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 250,
+      "wins": 116,
+      "prepWins": 215,
+      "timeouts": 0,
+      "outcomes": "1100111001011001000101001100000010100100110100000101000001111000000011000000100001110111111110101110100100110010110101111110000111010101001110001011010001101110010001011001000100101100011110010011010010110000011000101101100010001000011101111111000110",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,clean,clean,delay,delay,official,invest,invest,efficiency,efficiency,reserve,reserve,fund,fund,economist,projectReview,budgetReview": 250
+      },
+      "rate": 46.4
+    },
+    {
+      "type": "economic",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 250,
+      "wins": 179,
+      "prepWins": 240,
+      "timeouts": 0,
+      "outcomes": "0111111101111100101101111100100001100110111110010111111101111111101111110110100111110111011110111011110111111010111101111111011010011101111100111111011011101010110001011011010111101111111011011111111111111000010011101111100110011111011001011111010111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,reserve,official,fund,fund,economist,budgetReview,budgetReview,answer": 250
+      },
+      "rate": 71.6
+    },
+    {
+      "type": "economic",
+      "prep": "media",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 250,
+      "wins": 179,
+      "prepWins": 235,
+      "timeouts": 0,
+      "outcomes": "1111111011010011101101001100101111100111111111000111111001111001011111111110001011111111111111111111111111110100110101101000101111011110111100111011111011011011100010101110001111101110011110011111111110111011011101011111101110110110011100011111110011",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,planExplain,reserve,official,fund,fund,economist,budgetReview,budgetReview": 250
+      },
+      "rate": 71.6
+    },
+    {
+      "type": "economic",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 250,
+      "wins": 157,
+      "prepWins": 226,
+      "timeouts": 0,
+      "outcomes": "1010111001011011111101100100101011111110101110001110000001111011101011111000100111111111111100101110101100000101010111101100001111111101001111010011001101101010100101011001111110111111011101011111111000110010011001111101100011011010111101010111110110",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,clean,clean,delay,delay,official,invest,invest,efficiency,efficiency,reserve,reserve,fund,fund,economist,projectReview,budgetReview": 250
+      },
+      "rate": 62.8
+    },
+    {
+      "type": "economic",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 250,
+      "wins": 192,
+      "prepWins": 249,
+      "timeouts": 0,
+      "outcomes": "1110111101011111111101101111110101110111101011110111011111101101101111100110001111110111111111111111001101001011111111111110111111011101011100111011111110111111110100011001011111111111111111011101111011111100111101100111110111011111110001011111110101",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,reserve,official,fund,fund,economist,budgetReview,budgetReview,answer": 250
+      },
+      "rate": 76.8
+    },
+    {
+      "type": "economic",
+      "prep": "media",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 250,
+      "wins": 192,
+      "prepWins": 241,
+      "timeouts": 0,
+      "outcomes": "0110111001110011111101000111111011111111101101101111111011111011111111111010101111111111111101011111111111100101110101011010001111111111111111111011111110111111101110101010001111111111011111011011111101111010010110011111110110010111110101111111110011",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,planExplain,reserve,official,fund,fund,economist,budgetReview,budgetReview": 250
+      },
+      "rate": 76.8
+    },
+    {
+      "type": "economic",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "unchanged",
+      "total": 250,
+      "wins": 153,
+      "prepWins": 235,
+      "timeouts": 0,
+      "outcomes": "1010101001011001010110001100011011101111110101000100100011111100101011000101101101110111111110101101101110100010110111111100001101010111011110111011111001111110000001101001101100101100001111011111011010110000011010101111111010101110011111111111010111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,clean,clean,delay,delay,official,invest,invest,efficiency,efficiency,reserve,reserve,fund,fund,economist,projectReview,budgetReview": 250
+      },
+      "rate": 61.2
+    },
+    {
+      "type": "economic",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "owned",
+      "total": 250,
+      "wins": 213,
+      "prepWins": 247,
+      "timeouts": 0,
+      "outcomes": "1111111101111101001111111111110001111111111111010111111110111111101110110110111111110111111110111111111111111011111101111101011111111101111111111110111011111111110001111001111111111111111111011111111111111010011011111111101111111111011101111111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,reserve,official,fund,fund,economist,budgetReview,budgetReview,answer": 250
+      },
+      "rate": 85.2
+    },
+    {
+      "type": "economic",
+      "prep": "party",
+      "policy": "simple",
+      "mode": "rewards",
+      "total": 250,
+      "wins": 210,
+      "prepWins": 242,
+      "timeouts": 0,
+      "outcomes": "1111111111011011101101101110111111101111111111011110111011111101111111101110111111111111111111111111111111111101110101111010101111111110111111111011111011111111101011101111101111101110011110011111111110111011111111111111111110011110011011011111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,planExplain,reserve,official,fund,fund,economist,budgetReview,budgetReview": 250
+      },
+      "rate": 84
+    },
+    {
+      "type": "economic",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "unchanged",
+      "total": 250,
+      "wins": 179,
+      "prepWins": 243,
+      "timeouts": 0,
+      "outcomes": "1010101001011011110111101100101010111111101101011110110011111111101011111100100011101111111100101111101110000111010111101100001111111101111111110011111111101110110101111001111110111111011101011111111000110010011011111111111110111010111111010111010111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "answer,answer,procedure,procedure,clean,clean,delay,delay,official,invest,invest,efficiency,efficiency,reserve,reserve,fund,fund,economist,projectReview,budgetReview": 250
+      },
+      "rate": 71.6
+    },
+    {
+      "type": "economic",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "owned",
+      "total": 250,
+      "wins": 217,
+      "prepWins": 249,
+      "timeouts": 0,
+      "outcomes": "1110111111011111011111111111110111111111101011010111111111101101101111110110111111111111111101111111001111101011111111111111111111111101111111110111111111111111110101111001111111111111111111011001111111111100111111111111111111011111110101111111110111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,reserve,official,fund,fund,economist,budgetReview,budgetReview,answer": 250
+      },
+      "rate": 86.8
+    },
+    {
+      "type": "economic",
+      "prep": "party",
+      "policy": "tactical",
+      "mode": "rewards",
+      "total": 250,
+      "wins": 216,
+      "prepWins": 247,
+      "timeouts": 0,
+      "outcomes": "1110111101110011111101100110111111111111101111111110111011011111111111101010111111111111111111111111111111111111111101111010001111111111111111111011111111111111101111101011101111101111011111011111111100111110011111111111111110111111110111111111111111",
+      "choices": {
+        "planExplain": 235,
+        "lobby": 15
+      },
+      "decks": {
+        "projectReview,answer,procedure,procedure,clean,clean,economist,delay,official,invest,invest,efficiency,planExplain,reserve,official,fund,fund,economist,budgetReview,budgetReview": 250
+      },
+      "rate": 86.4
+    }
+  ]
+}
