@@ -157,3 +157,7 @@ v13回帰は段階解放、プロファイル構成/置換枚数、報酬選択/
 `npm run balance:v14`は全初期デッキ/3段階/3準備/2方策で検証。予約ドローを評価する方策を使うため、旧版の比較も `VERSION=v13 TYPES=regional TRIALS=200 REPORT_PATH=reports/regional_baseline_v13.json node tests/balance_v14.cjs` で同じ方策を適用する。別乱数入門確認は `TYPES=regional PROFILES=intro TRIALS=300 SEED_BASE=246810 REPORT_PATH=reports/regional_v14_holdout.json node tests/balance_v14.cjs`。
 
 回帰は人物の介入/成長/攻撃で共通枠を使うこと、ターン切替/停止/Undo、記者説明の当ターン未補充と次ターン解決、予定ドロー表示、裏取りコスト2を含む。各人物のドローを単独除去する実験は、合計上限の採用テストとは区別する。詳細はREGIONAL_BALANCE_V14.md。
+
+## v14：収集デッキ比較
+
+`npm run compare:collection`。同数の候補探索と独立した測定乱数で、初期所持＋選択2枚／初期2属性全所持を比較。初期比較は `CANDIDATES=1 TRAIN=1 BUDGETS=starter REPORT_PATH=reports/collection_starters_v14.json node tests/collection_v14.cjs`。方法・判断・限界は `COLLECTION_BALANCE_V14.md`。ゲーム本体は変更せず、測定21,600案件の打ち切り0。
