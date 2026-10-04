@@ -7,3 +7,5 @@ Godot 4.6 stableで`project.godot`を開く。日本語フォントはリポジ�
 Android APKはGitHub Actionsで生成。[導入・署名・検証資料](../docs/GODOT_ANDROID.md)を参照。
 
 UI試作02の配置・制限・検証は `../docs/GODOT_UI_V02.md` を参照。
+
+UI04は `../docs/ART_UI_V04.md` を参照。初回に `python -m pip install fonttools==4.61.1` を実行し、フォント準備スクリプトで静的太字を生成します。

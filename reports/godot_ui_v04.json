@@ -1,0 +1,15 @@
+{
+ "version":"UI04",
+ "setting":"fictional country; no national flags or chrysanthemum",
+ "art":"generated 3x3 atlas and chamber; partial card coverage",
+ "staticFontWeight":700,
+ "parityBattles":48,
+ "parityStates":896,
+ "parityPassed":true,
+ "desktopOpenGLScreenshots":["selected","targeting","victory"],
+ "desktopVisualInspection":true,
+ "androidDeviceInspection":false,
+ "battleEngineChanged":false,
+ "newBgm":false,
+ "enemyPersonRules":false
+}

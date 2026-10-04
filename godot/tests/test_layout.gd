@@ -8,16 +8,19 @@ func check_screen(scene):
 			failures.append("Vertical overflow: %s %s / %s" % [node.name,node.get_global_rect(),view])
 	for card in scene.hand_panels:
 		if card.get_global_rect().end.x > view.end.x + 1: failures.append("Seven-card horizontal overflow")
+func check_labels(node):
+	for child in node.get_children():
+		if child is Label and not child.text.is_empty() and child.size.y < 1:
+			failures.append("Collapsed text: "+child.text)
+		check_labels(child)
 func run():
 	var scene = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	await process_frame
-	var ts = TextServerManager.get_primary_interface()
-	var font = scene.theme.default_font
-	font.get_string_size("資料答弁",HORIZONTAL_ALIGNMENT_LEFT,-1,24)
-	for rid in font.get_rids():
-		if ts.font_get_variation_coordinates(rid).get(ts.name_to_tag("wght"),0) != 700:
-			failures.append("Font weight did not reach rendering server")
+	if not scene.theme.default_font is FontFile:
+		failures.append("Expected static font file")
+	if scene.theme.default_font.get_string_size("資料答弁",HORIZONTAL_ALIGNMENT_LEFT,-1,24).x < 40:
+		failures.append("Missing Japanese glyph advance")
 	for viewport_size in [Vector2i(1280,720),Vector2i(1560,720),Vector2i(1536,709)]:
 		root.size = viewport_size
 		scene.start_battle("admin")
@@ -31,17 +34,21 @@ func run():
 		scene.render_battle()
 		for frame in range(5): await process_frame
 		check_screen(scene)
+		check_labels(scene.body)
 		scene.notice = "長い案内文を表示する場面でも操作ボタンが画面外へ押し出されないことを確認します。".repeat(3)
 		scene.render_battle()
 		for frame in range(5): await process_frame
 		check_screen(scene)
+		check_labels(scene.body)
 		scene.select_card(0)
 		for frame in range(5): await process_frame
 		check_screen(scene)
+		check_labels(scene.body)
 		scene.game.b.outcome = "win"
 		scene.render_battle()
 		for frame in range(5): await process_frame
 		check_screen(scene)
+		check_labels(scene.body)
 		scene.game.b.outcome = null
 		if scene.selected != 0 or not scene.game.history.is_empty(): failures.append("Card selection unexpectedly played a card")
 		scene.game.b.hand.append(people[1])
@@ -57,5 +64,5 @@ func run():
 		for failure in failures: push_error(failure)
 		quit(1)
 	else:
-		print("PASS: 7 cards, 3 allies, 3 forecasts, selection/detail, overflow discard, footer bounds at three landscape sizes; actual font weight700 and long status/victory (geometry only).")
+		print("PASS: 7 cards, 3 allies, 3 forecasts, selection/detail, overflow discard, footer bounds at three landscape sizes; static Japanese glyph advance and long status/victory (geometry only).")
 		quit(0)

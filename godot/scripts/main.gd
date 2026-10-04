@@ -22,19 +22,23 @@ var detail_box: VBoxContainer
 const AFF_COLORS = {"admin":Color("328cd8"),"politics":Color("ca5460"),"press":Color("8f72cf"),"business":Color("b18a36"),"community":Color("39876b"),"noir":Color("746782")}
 
 func _ready():
-	fonts = load("res://fonts/NotoSansJP.ttf") if ResourceLoader.exists("res://fonts/NotoSansJP.ttf") else SystemFont.new()
+	fonts = load("res://fonts/NotoSansJP-Bold.ttf") if ResourceLoader.exists("res://fonts/NotoSansJP-Bold.ttf") else SystemFont.new()
 	var theme = Theme.new()
-	var weighted = FontVariation.new()
-	weighted.base_font = fonts
-	weighted.variation_opentype = {TextServerManager.get_primary_interface().name_to_tag("wght"):700}
-	theme.default_font = weighted
+	theme.default_font = fonts
 	theme.default_font_size = 21
 	self.theme = theme
 	audio = AudioStreamPlayer.new()
 	audio.volume_db = -18
 	add_child(audio)
+	var backdrop = TextureRect.new()
+	backdrop.texture = load("res://art/generated/chamber.jpg")
+	backdrop.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	backdrop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(backdrop)
 	var bg = ColorRect.new()
-	bg.color = INK
+	bg.color = Color(0.04,0.07,0.10,0.60)
 	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(bg)
@@ -45,7 +49,7 @@ func _ready():
 	body = VBoxContainer.new()
 	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	body.add_theme_constant_override("separation",8)
+	body.add_theme_constant_override("separation",6)
 	margin.add_child(body)
 	show_menu()
 
@@ -62,8 +66,6 @@ func text(value: String, parent: Node = body, size: int = 21, color: Color = PAP
 	label.add_theme_font_size_override("font_size",size)
 	label.add_theme_color_override("font_color",color)
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-	label.clip_text = true
 	parent.add_child(label)
 	return label
 
@@ -72,7 +74,7 @@ func style(color: Color, border: Color) -> StyleBoxFlat:
 	box.bg_color = color
 	box.border_color = border
 	box.set_border_width_all(2)
-	box.set_corner_radius_all(5)
+	box.set_corner_radius_all(3)
 	box.content_margin_left = 10
 	box.content_margin_right = 10
 	box.content_margin_top = 6
@@ -84,7 +86,7 @@ func button(value: String, parent: Node, action: Callable, disabled: bool = fals
 	btn.text = value
 	btn.clip_text = true
 	btn.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-	btn.custom_minimum_size.y = 48
+	btn.custom_minimum_size = Vector2(maxf(86,fonts.get_string_size(value,HORIZONTAL_ALIGNMENT_LEFT,-1,21).x+24),48)
 	btn.add_theme_stylebox_override("normal",style(GOLD if accent else Color("263d49"),GOLD if accent else Color("67808b")))
 	btn.add_theme_stylebox_override("hover",style(Color("365664"),GOLD))
 	btn.add_theme_stylebox_override("pressed",style(Color("4c6b77"),PAPER))
@@ -104,10 +106,10 @@ func panel(parent: Node, color: Color = Color("20333f")) -> VBoxContainer:
 	var p = PanelContainer.new()
 	p.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	p.size_flags_stretch_ratio = 1.0
-	p.add_theme_stylebox_override("panel",style(color,Color("526d79")))
+	p.add_theme_stylebox_override("panel",style(color,Color("887449")))
 	parent.add_child(p)
 	var box = VBoxContainer.new()
-	box.add_theme_constant_override("separation",8)
+	box.add_theme_constant_override("separation",4)
 	p.add_child(box)
 	return box
 
@@ -116,7 +118,7 @@ func show_menu():
 	selected = -1
 	targeting = false
 	clear_body()
-	text("KASUMIGASEKI  /  GODOT PROTOTYPE 02",body,18,GOLD)
+	text("FICTIONAL REPUBLIC  /  GODOT PROTOTYPE 04",body,18,GOLD)
 	text("政局の手札",body,42,GOLD)
 	text("夢の超特急 — 国会決戦",body,28)
 	text("実機確認用の1戦です。準備戦・報酬・キャンペーンはHTML版に残しています。\n今回は準備成果を選んで本戦へ進みます。HP30／基本3コスト／手札保持・通常1枚ドロー。")
@@ -172,7 +174,7 @@ func render_battle():
 	button("設定",header,show_settings)
 	var arena = row()
 	arena.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	var own = panel(arena)
+	var own = panel(arena,Color(0.06,0.12,0.17,0.96))
 	player_label = text("内閣  HP %d / 30   ブロック %d" % [b.hp,b.block],own,27,Color("94d6b5"))
 	text("次の攻撃＋%d / 次ターン追加ドロー%d" % [b.boost,b.nextDraw],own,18)
 	for index in range(3):
@@ -182,11 +184,18 @@ func render_battle():
 		var ally = b.allies[index]
 		var g = b.get("growth",{}).get(ally.id,{"progress":0,"level":0})
 		var growth = "成長済 ★" if g.level else "成長%d/%d" % [g.progress,game.data.growth[ally.id]]
-		button(game.card(ally.id).name+"  "+growth+(" 停止中" if ally.disabledUntil >= b.turn else " 有効"),own,func(): show_person(ally.id),false)
-	var enemy = panel(arena,Color("352e39"))
+		var person_row = row(own)
+		var portrait = TextureRect.new()
+		portrait.texture = card_art(game.card(ally.id))
+		portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		portrait.custom_minimum_size = Vector2(48,48)
+		person_row.add_child(portrait)
+		var person_button = button(game.card(ally.id).name+"  "+growth+(" 停止中" if ally.disabledUntil >= b.turn else " 有効"),person_row,func(): show_person(ally.id),false)
+		person_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var enemy = panel(arena,Color(0.18,0.12,0.15,0.96))
 	enemy_label = text("国会  HP %d / 30   ブロック %d" % [b.enemyHP,b.enemyBlock],enemy,27,Color("f3b0a6"))
 	text("予告攻撃%d / 防御後%d" % [game.forecast(),maxi(0,game.forecast()-int(b.block))],enemy,22,GOLD)
-	text("敵人物：次の検証で追加予定",enemy,17,Color("bfc7d1"))
 	for forecast in b.plan:
 		var effects: Array = []
 		for e in forecast.effects:
@@ -225,7 +234,7 @@ func render_battle():
 		text("手札をタップして選択",description,23,GOLD)
 		text("説明を確認して「使用」。人物をタップすると能力と配置解除を表示。",description,20)
 	var hand = row()
-	hand.custom_minimum_size.y = 140
+	hand.custom_minimum_size.y = 164
 	# Overflow cards remain individually reachable without shrinking every card.
 	var hand_scroll = ScrollContainer.new()
 	hand_scroll.name = "HandOverflow"
@@ -241,7 +250,7 @@ func render_battle():
 		var c = game.card(b.hand[i])
 		var holder = Button.new()
 		holder.name = "HandCard%d" % i
-		holder.custom_minimum_size = Vector2(156,128)
+		holder.custom_minimum_size = Vector2(156,152)
 		holder.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		holder.add_theme_stylebox_override("normal",style(PAPER,GOLD if selected == i else Color("71838b")))
 		holder.add_theme_stylebox_override("hover",style(Color("fff0cf"),GOLD))
@@ -260,11 +269,11 @@ func render_battle():
 		title.max_lines_visible = 2
 		title.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 		var art = TextureRect.new()
-		art.texture = load("res://art/placeholders/"+c.type+".svg") if c.type in ["attack","defense","prep","disrupt","person"] else load("res://art/placeholders/disrupt.svg")
+		art.texture = card_art(c)
 		art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 		art.size_flags_vertical = Control.SIZE_EXPAND_FILL
-		art.modulate = AFF_COLORS.get(c.aff,INK)
+		art.custom_minimum_size.y = 44
 		content.add_child(art)
 		text(game.data.attributes[c.aff]+" / "+{"attack":"攻撃","defense":"防御","prep":"準備","disrupt":"妨害","person":"人物"}.get(c.type,"負担"),content,17,INK)
 		for child in content.get_children(): child.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -274,6 +283,9 @@ func render_battle():
 	var status = game.result if game.done else ("手札超過：カードを選んで捨てる" if b.hand.size() > 7 else notice)
 	var status_label = text(status,status_row,18,GOLD)
 	status_label.max_lines_visible = 1
+	status_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	status_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	status_label.clip_text = true
 	button("ログ",actions,show_log)
 	var spacer = Control.new()
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -466,3 +478,19 @@ func show_credits():
 	dialog.confirmed.connect(dialog.queue_free)
 	dialog.canceled.connect(dialog.queue_free)
 	dialog.popup_centered()
+
+# Atlas regions are sampled at runtime: no text or rules baked into illustrations.
+func card_art(c: Dictionary) -> Texture2D:
+	var tiles = {"official":0,"leader":1,"reporter":2,"delay":4,"answer":7,"lobby":6,"report":8,"investigate":8,"brief":8,"budgetReview":5}
+	var tile = tiles.get(c.id,-1)
+	if tile < 0:
+		if c.type == "person":
+			return load("res://art/placeholders/person.svg")
+		tile = {"admin":4,"politics":6,"press":8,"business":5,"community":6,"noir":6}.get(c.aff,4)
+	var atlas = load("res://art/generated/political_atlas.jpg")
+	var texture = AtlasTexture.new()
+	texture.atlas = atlas
+	var cell = atlas.get_width()/3.0
+	texture.region = Rect2((tile%3)*cell,floor(tile/3.0)*cell,cell,cell)
+	texture.filter_clip = true
+	return texture

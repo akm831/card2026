@@ -8,3 +8,15 @@ if not path.exists():
  with urllib.request.urlopen(url,timeout=120) as response:path.write_bytes(response.read())
 if hashlib.sha256(path.read_bytes()).hexdigest()!=expected:raise SystemExit('Japanese font checksum mismatch')
 print('Japanese font verified (SIL OFL 1.1).')
+
+# Pinning a static instance avoids variable-font rendering regressions on mobile.
+from fontTools.ttLib import TTFont
+from fontTools.varLib.instancer import instantiateVariableFont
+static_path=path.with_name('NotoSansJP-Bold.ttf')
+if not static_path.exists():
+ font=TTFont(path)
+ instantiateVariableFont(font,{'wght':700},inplace=True)
+ font.save(static_path)
+check=TTFont(static_path)
+assert 'fvar' not in check and check['OS/2'].usWeightClass == 700
+print('Static bold Japanese font verified.')
