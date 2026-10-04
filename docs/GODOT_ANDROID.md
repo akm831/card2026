@@ -93,3 +93,7 @@ v18の予告軽減には、浅いコピーにより敵手札の効果値まで�
 - [Godot4.6 Android出力](https://docs.godotengine.org/en/4.6/tutorials/export/exporting_for_android.html)
 - [Godotコマンドライン](https://docs.godotengine.org/en/4.6/tutorials/editor/command_line_tutorial.html)
 - [GitHub Actions成果物の取得](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts)
+
+## 初回CIの実行記録
+
+[GitHub Actions実行](https://github.com/akm831/card2026/actions/runs/37193919825)が成功。`card2026-android-2`のArtifactsからAPKを取得できる。ローカルとCIのAPK出力・署名検証を確認済み。集計はreports/godot_v01.json。

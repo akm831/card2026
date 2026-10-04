@@ -1,0 +1,26 @@
+{
+  "engine": "Godot 4.6.stable.official.89cea1439",
+  "codeCommit": "48ea2b211066c0c41549c29d103eba23cd5b43a2",
+  "htmlReference": "prototypes/kasumigaseki_cards_v18.html",
+  "battles": 48,
+  "stateComparisons": 896,
+  "parity": "passed",
+  "saveRoundtrip": "passed",
+  "uiHeadless": "passed",
+  "creditsRuntime": "passed",
+  "visualInspection": false,
+  "androidDeviceTest": false,
+  "apkExport": "passed",
+  "apkSignatureV2V3": "verified",
+  "localApkSha256": "9d76244c2a5f0cc1c67d00e6f09f5b1502c91102bced7725fbabfe86485b7d2c",
+  "ciRun": "https://github.com/akm831/card2026/actions/runs/37193919825",
+  "ciConclusion": "success",
+  "ciArtifact": "card2026-android-2",
+  "ciArtifactArchiveSha256": "a2814f82074712338d4b0b72f4c7c8476bd408ba23658d2613c39c5c6efd31d1",
+  "limitations": [
+    "Battle only; campaign and rewards remain in HTML.",
+    "Reward RNG after victory confirmation excluded.",
+    "Legacy forecast/enemy hand shallow effect alias preserved for compatibility; separate fix and balance measurement required.",
+    "No visual or actual Android-device check."
+  ]
+}
