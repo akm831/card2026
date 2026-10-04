@@ -73,3 +73,7 @@ reporterDrawがbattle.used.reporterDrawで人物追加ドローを共通の1枚�
 ## v16：所持と保存枠
 
 `start()` が初期20枚の実数を数える。`owned` は共有資産、`deckSlots` は5個の保存編成、`activeSlot` は編集中枠。`legalDeck()` による所持枚数・20枚・同名2枚チェックを保存／読込／完了に適用。テンプレートは所持確認後に編成のみ復帰。試遊の `allStarters` は画面と試遊メモに記録。保存キー `seikyoku-v16`。旧版からの自動移行は未実装。
+
+## v17：対象属性と報酬
+
+敵行動に `aff` を付与。`enemyAff` は現行論点の対応を旧形式のフォールバックに使う。`reduceAff`／`affs` と `matchesForecast` を軽減・無効化・対象数・プレビューに共有し、対象なしの妨害を使用不可にする。従来の論点タグは準備差し替え・特定条件で残す。`finish` の報酬は5回の独立抽選、選択報酬は廃止。保存キー `seikyoku-v17`。

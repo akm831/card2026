@@ -1,0 +1,407 @@
+{
+  "sourceSha256": "0fbde4acd86c85187d11d824e35996320c920e9021912a481435b3bcb08b08d5",
+  "trials": 1000,
+  "method": "Native five uniform independent draws with replacement across all non-bad cards; duplicate copies above2 turn into tokens. Four exact20 starters, ten successive victories without battle or exchanges. Simulated pack accounting, not a campaign win test.",
+  "rows": [
+    {
+      "type": "admin",
+      "round": 1,
+      "total": 1000,
+      "copies": 3950,
+      "newNames": 3290,
+      "tokens": 1050,
+      "noNewCopies": 0,
+      "canExchange": 3
+    },
+    {
+      "type": "admin",
+      "round": 2,
+      "total": 1000,
+      "copies": 3855,
+      "newNames": 2876,
+      "tokens": 1145,
+      "noNewCopies": 0,
+      "canExchange": 164
+    },
+    {
+      "type": "admin",
+      "round": 3,
+      "total": 1000,
+      "copies": 3711,
+      "newNames": 2534,
+      "tokens": 1289,
+      "noNewCopies": 0,
+      "canExchange": 488
+    },
+    {
+      "type": "admin",
+      "round": 4,
+      "total": 1000,
+      "copies": 3563,
+      "newNames": 2224,
+      "tokens": 1437,
+      "noNewCopies": 0,
+      "canExchange": 781
+    },
+    {
+      "type": "admin",
+      "round": 5,
+      "total": 1000,
+      "copies": 3360,
+      "newNames": 1938,
+      "tokens": 1640,
+      "noNewCopies": 1,
+      "canExchange": 941
+    },
+    {
+      "type": "admin",
+      "round": 6,
+      "total": 1000,
+      "copies": 3193,
+      "newNames": 1726,
+      "tokens": 1807,
+      "noNewCopies": 8,
+      "canExchange": 990
+    },
+    {
+      "type": "admin",
+      "round": 7,
+      "total": 1000,
+      "copies": 3005,
+      "newNames": 1506,
+      "tokens": 1995,
+      "noNewCopies": 7,
+      "canExchange": 1000
+    },
+    {
+      "type": "admin",
+      "round": 8,
+      "total": 1000,
+      "copies": 2825,
+      "newNames": 1299,
+      "tokens": 2175,
+      "noNewCopies": 8,
+      "canExchange": 1000
+    },
+    {
+      "type": "admin",
+      "round": 9,
+      "total": 1000,
+      "copies": 2615,
+      "newNames": 1168,
+      "tokens": 2385,
+      "noNewCopies": 29,
+      "canExchange": 1000
+    },
+    {
+      "type": "admin",
+      "round": 10,
+      "total": 1000,
+      "copies": 2428,
+      "newNames": 1016,
+      "tokens": 2572,
+      "noNewCopies": 37,
+      "canExchange": 1000
+    },
+    {
+      "type": "regional",
+      "round": 1,
+      "total": 1000,
+      "copies": 4191,
+      "newNames": 3050,
+      "tokens": 809,
+      "noNewCopies": 0,
+      "canExchange": 6
+    },
+    {
+      "type": "regional",
+      "round": 2,
+      "total": 1000,
+      "copies": 4036,
+      "newNames": 2690,
+      "tokens": 964,
+      "noNewCopies": 0,
+      "canExchange": 79
+    },
+    {
+      "type": "regional",
+      "round": 3,
+      "total": 1000,
+      "copies": 3835,
+      "newNames": 2359,
+      "tokens": 1165,
+      "noNewCopies": 1,
+      "canExchange": 326
+    },
+    {
+      "type": "regional",
+      "round": 4,
+      "total": 1000,
+      "copies": 3628,
+      "newNames": 2063,
+      "tokens": 1372,
+      "noNewCopies": 0,
+      "canExchange": 677
+    },
+    {
+      "type": "regional",
+      "round": 5,
+      "total": 1000,
+      "copies": 3413,
+      "newNames": 1798,
+      "tokens": 1587,
+      "noNewCopies": 2,
+      "canExchange": 894
+    },
+    {
+      "type": "regional",
+      "round": 6,
+      "total": 1000,
+      "copies": 3212,
+      "newNames": 1563,
+      "tokens": 1788,
+      "noNewCopies": 7,
+      "canExchange": 988
+    },
+    {
+      "type": "regional",
+      "round": 7,
+      "total": 1000,
+      "copies": 3024,
+      "newNames": 1324,
+      "tokens": 1976,
+      "noNewCopies": 12,
+      "canExchange": 1000
+    },
+    {
+      "type": "regional",
+      "round": 8,
+      "total": 1000,
+      "copies": 2831,
+      "newNames": 1273,
+      "tokens": 2169,
+      "noNewCopies": 17,
+      "canExchange": 1000
+    },
+    {
+      "type": "regional",
+      "round": 9,
+      "total": 1000,
+      "copies": 2648,
+      "newNames": 1104,
+      "tokens": 2352,
+      "noNewCopies": 23,
+      "canExchange": 1000
+    },
+    {
+      "type": "regional",
+      "round": 10,
+      "total": 1000,
+      "copies": 2387,
+      "newNames": 939,
+      "tokens": 2613,
+      "noNewCopies": 28,
+      "canExchange": 1000
+    },
+    {
+      "type": "noir",
+      "round": 1,
+      "total": 1000,
+      "copies": 3949,
+      "newNames": 3287,
+      "tokens": 1051,
+      "noNewCopies": 0,
+      "canExchange": 7
+    },
+    {
+      "type": "noir",
+      "round": 2,
+      "total": 1000,
+      "copies": 3836,
+      "newNames": 2882,
+      "tokens": 1164,
+      "noNewCopies": 0,
+      "canExchange": 154
+    },
+    {
+      "type": "noir",
+      "round": 3,
+      "total": 1000,
+      "copies": 3728,
+      "newNames": 2561,
+      "tokens": 1272,
+      "noNewCopies": 0,
+      "canExchange": 491
+    },
+    {
+      "type": "noir",
+      "round": 4,
+      "total": 1000,
+      "copies": 3587,
+      "newNames": 2238,
+      "tokens": 1413,
+      "noNewCopies": 1,
+      "canExchange": 776
+    },
+    {
+      "type": "noir",
+      "round": 5,
+      "total": 1000,
+      "copies": 3361,
+      "newNames": 1921,
+      "tokens": 1639,
+      "noNewCopies": 5,
+      "canExchange": 938
+    },
+    {
+      "type": "noir",
+      "round": 6,
+      "total": 1000,
+      "copies": 3174,
+      "newNames": 1709,
+      "tokens": 1826,
+      "noNewCopies": 8,
+      "canExchange": 987
+    },
+    {
+      "type": "noir",
+      "round": 7,
+      "total": 1000,
+      "copies": 3011,
+      "newNames": 1506,
+      "tokens": 1989,
+      "noNewCopies": 6,
+      "canExchange": 1000
+    },
+    {
+      "type": "noir",
+      "round": 8,
+      "total": 1000,
+      "copies": 2839,
+      "newNames": 1351,
+      "tokens": 2161,
+      "noNewCopies": 17,
+      "canExchange": 1000
+    },
+    {
+      "type": "noir",
+      "round": 9,
+      "total": 1000,
+      "copies": 2659,
+      "newNames": 1175,
+      "tokens": 2341,
+      "noNewCopies": 21,
+      "canExchange": 1000
+    },
+    {
+      "type": "noir",
+      "round": 10,
+      "total": 1000,
+      "copies": 2419,
+      "newNames": 1012,
+      "tokens": 2581,
+      "noNewCopies": 33,
+      "canExchange": 1000
+    },
+    {
+      "type": "economic",
+      "round": 1,
+      "total": 1000,
+      "copies": 3940,
+      "newNames": 3311,
+      "tokens": 1060,
+      "noNewCopies": 0,
+      "canExchange": 9
+    },
+    {
+      "type": "economic",
+      "round": 2,
+      "total": 1000,
+      "copies": 3841,
+      "newNames": 2871,
+      "tokens": 1159,
+      "noNewCopies": 0,
+      "canExchange": 163
+    },
+    {
+      "type": "economic",
+      "round": 3,
+      "total": 1000,
+      "copies": 3706,
+      "newNames": 2554,
+      "tokens": 1294,
+      "noNewCopies": 2,
+      "canExchange": 459
+    },
+    {
+      "type": "economic",
+      "round": 4,
+      "total": 1000,
+      "copies": 3565,
+      "newNames": 2212,
+      "tokens": 1435,
+      "noNewCopies": 0,
+      "canExchange": 783
+    },
+    {
+      "type": "economic",
+      "round": 5,
+      "total": 1000,
+      "copies": 3374,
+      "newNames": 1923,
+      "tokens": 1626,
+      "noNewCopies": 3,
+      "canExchange": 947
+    },
+    {
+      "type": "economic",
+      "round": 6,
+      "total": 1000,
+      "copies": 3178,
+      "newNames": 1733,
+      "tokens": 1822,
+      "noNewCopies": 6,
+      "canExchange": 991
+    },
+    {
+      "type": "economic",
+      "round": 7,
+      "total": 1000,
+      "copies": 2989,
+      "newNames": 1485,
+      "tokens": 2011,
+      "noNewCopies": 11,
+      "canExchange": 999
+    },
+    {
+      "type": "economic",
+      "round": 8,
+      "total": 1000,
+      "copies": 2776,
+      "newNames": 1302,
+      "tokens": 2224,
+      "noNewCopies": 11,
+      "canExchange": 1000
+    },
+    {
+      "type": "economic",
+      "round": 9,
+      "total": 1000,
+      "copies": 2640,
+      "newNames": 1179,
+      "tokens": 2360,
+      "noNewCopies": 24,
+      "canExchange": 1000
+    },
+    {
+      "type": "economic",
+      "round": 10,
+      "total": 1000,
+      "copies": 2437,
+      "newNames": 1017,
+      "tokens": 2563,
+      "noNewCopies": 29,
+      "canExchange": 1000
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "version": "v17",
+  "purpose": "Full-collection test recipes, not granted starter decks",
+  "decks": [
+    {
+      "name": "行政＋報道",
+      "affs": [
+        "admin",
+        "press"
+      ],
+      "cards": [
+        "official",
+        "planExplain",
+        "reporter",
+        "procedure",
+        "procedure",
+        "budgetReview",
+        "budgetReview",
+        "answer",
+        "openDebate",
+        "clean",
+        "reporter",
+        "openDebate",
+        "delay",
+        "report",
+        "report",
+        "publicQuestion",
+        "publicQuestion",
+        "brief",
+        "delay",
+        "investigate"
+      ]
+    },
+    {
+      "name": "行政＋地域",
+      "affs": [
+        "admin",
+        "community"
+      ],
+      "cards": [
+        "official",
+        "planExplain",
+        "planExplain",
+        "procedure",
+        "procedure",
+        "budgetReview",
+        "budgetReview",
+        "answer",
+        "organizer",
+        "clean",
+        "organizer",
+        "routeExplain",
+        "routeExplain",
+        "voice",
+        "voice",
+        "localPetition",
+        "localPetition",
+        "network",
+        "network",
+        "return"
+      ]
+    },
+    {
+      "name": "行政＋裏人脈",
+      "affs": [
+        "admin",
+        "noir"
+      ],
+      "cards": [
+        "official",
+        "planExplain",
+        "planExplain",
+        "procedure",
+        "procedure",
+        "budgetReview",
+        "budgetReview",
+        "answer",
+        "answer",
+        "clean",
+        "broker",
+        "force",
+        "force",
+        "fulfillDeal",
+        "fulfillDeal",
+        "silence",
+        "silence",
+        "favor",
+        "clean",
+        "deal"
+      ]
+    },
+    {
+      "name": "政治＋報道",
+      "affs": [
+        "politics",
+        "press"
+      ],
+      "cards": [
+        "leader",
+        "debate",
+        "debate",
+        "protect",
+        "protect",
+        "lobby",
+        "lobby",
+        "staffChange",
+        "staffChange",
+        "whip",
+        "reporter",
+        "openDebate",
+        "openDebate",
+        "report",
+        "report",
+        "publicQuestion",
+        "publicQuestion",
+        "brief",
+        "brief",
+        "investigate"
+      ]
+    },
+    {
+      "name": "政治＋経済",
+      "affs": [
+        "politics",
+        "business"
+      ],
+      "cards": [
+        "leader",
+        "debate",
+        "debate",
+        "protect",
+        "protect",
+        "lobby",
+        "economist",
+        "staffChange",
+        "staffChange",
+        "whip",
+        "economist",
+        "efficiency",
+        "efficiency",
+        "projectReview",
+        "projectReview",
+        "reserve",
+        "whip",
+        "invest",
+        "invest",
+        "fund"
+      ]
+    },
+    {
+      "name": "政治＋地域",
+      "affs": [
+        "politics",
+        "community"
+      ],
+      "cards": [
+        "protect",
+        "debate",
+        "debate",
+        "protect",
+        "leader",
+        "lobby",
+        "organizer",
+        "staffChange",
+        "staffChange",
+        "whip",
+        "organizer",
+        "routeExplain",
+        "routeExplain",
+        "voice",
+        "petition",
+        "localPetition",
+        "localPetition",
+        "network",
+        "voice",
+        "return"
+      ]
+    },
+    {
+      "name": "報道＋経済",
+      "affs": [
+        "press",
+        "business"
+      ],
+      "cards": [
+        "reporter",
+        "openDebate",
+        "openDebate",
+        "report",
+        "report",
+        "publicQuestion",
+        "publicQuestion",
+        "brief",
+        "brief",
+        "investigate",
+        "economist",
+        "efficiency",
+        "efficiency",
+        "projectReview",
+        "projectReview",
+        "reserve",
+        "reserve",
+        "invest",
+        "invest",
+        "fund"
+      ]
+    },
+    {
+      "name": "報道＋裏人脈",
+      "affs": [
+        "press",
+        "noir"
+      ],
+      "cards": [
+        "reporter",
+        "openDebate",
+        "openDebate",
+        "report",
+        "report",
+        "publicQuestion",
+        "publicQuestion",
+        "brief",
+        "brief",
+        "investigate",
+        "reporter",
+        "force",
+        "force",
+        "fulfillDeal",
+        "investigate",
+        "silence",
+        "silence",
+        "favor",
+        "broker",
+        "deal"
+      ]
+    },
+    {
+      "name": "経済＋地域",
+      "affs": [
+        "business",
+        "community"
+      ],
+      "cards": [
+        "economist",
+        "efficiency",
+        "fund",
+        "projectReview",
+        "petition",
+        "reserve",
+        "localPetition",
+        "invest",
+        "return",
+        "fund",
+        "organizer",
+        "routeExplain",
+        "routeExplain",
+        "voice",
+        "voice",
+        "localPetition",
+        "organizer",
+        "network",
+        "network",
+        "return"
+      ]
+    },
+    {
+      "name": "経済＋裏人脈",
+      "affs": [
+        "business",
+        "noir"
+      ],
+      "cards": [
+        "economist",
+        "efficiency",
+        "efficiency",
+        "projectReview",
+        "projectReview",
+        "reserve",
+        "broker",
+        "invest",
+        "invest",
+        "fund",
+        "broker",
+        "force",
+        "force",
+        "fulfillDeal",
+        "fulfillDeal",
+        "silence",
+        "fund",
+        "favor",
+        "favor",
+        "deal"
+      ]
+    },
+    {
+      "name": "地域＋裏人脈",
+      "affs": [
+        "community",
+        "noir"
+      ],
+      "cards": [
+        "organizer",
+        "routeExplain",
+        "routeExplain",
+        "voice",
+        "voice",
+        "localPetition",
+        "localPetition",
+        "network",
+        "network",
+        "return",
+        "broker",
+        "force",
+        "force",
+        "fulfillDeal",
+        "fulfillDeal",
+        "silence",
+        "silence",
+        "favor",
+        "favor",
+        "deal"
+      ]
+    },
+    {
+      "name": "行政＋政治",
+      "affs": [
+        "admin",
+        "politics"
+      ],
+      "cards": [
+        "official",
+        "planExplain",
+        "planExplain",
+        "procedure",
+        "procedure",
+        "budgetReview",
+        "official",
+        "answer",
+        "budgetReview",
+        "clean",
+        "leader",
+        "debate",
+        "debate",
+        "protect",
+        "protect",
+        "lobby",
+        "delay",
+        "staffChange",
+        "staffChange",
+        "whip"
+      ]
+    },
+    {
+      "name": "行政＋経済",
+      "affs": [
+        "admin",
+        "business"
+      ],
+      "cards": [
+        "official",
+        "planExplain",
+        "planExplain",
+        "procedure",
+        "official",
+        "budgetReview",
+        "budgetReview",
+        "answer",
+        "economist",
+        "clean",
+        "economist",
+        "efficiency",
+        "efficiency",
+        "projectReview",
+        "projectReview",
+        "reserve",
+        "procedure",
+        "invest",
+        "fund",
+        "fund"
+      ]
+    },
+    {
+      "name": "政治＋裏人脈",
+      "affs": [
+        "politics",
+        "noir"
+      ],
+      "cards": [
+        "lobby",
+        "lobby",
+        "debate",
+        "debate",
+        "protect",
+        "protect",
+        "staffChange",
+        "whip",
+        "leader",
+        "force",
+        "force",
+        "deal",
+        "deal",
+        "silence",
+        "silence",
+        "fulfillDeal",
+        "favor",
+        "broker",
+        "fulfillDeal",
+        "staffChange"
+      ]
+    },
+    {
+      "name": "報道＋地域",
+      "affs": [
+        "press",
+        "community"
+      ],
+      "cards": [
+        "reporter",
+        "openDebate",
+        "counter",
+        "report",
+        "counter",
+        "publicQuestion",
+        "publicQuestion",
+        "brief",
+        "organizer",
+        "investigate",
+        "organizer",
+        "routeExplain",
+        "routeExplain",
+        "voice",
+        "return",
+        "localPetition",
+        "localPetition",
+        "network",
+        "network",
+        "return"
+      ]
+    }
+  ]
+}
