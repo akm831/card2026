@@ -39,6 +39,7 @@ jobs:
           "$GODOT" --headless --path godot --editor --import --quit
           "$GODOT" --headless --path godot --script tests/test_engine.gd
           timeout 120 "$GODOT" --headless --path godot --script tests/test_ui.gd
+          timeout 120 "$GODOT" --headless --path godot --script tests/test_layout.gd
       - name: Android SDK
         run: |
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platform-tools' 'platforms;android-35' 'build-tools;35.0.1'

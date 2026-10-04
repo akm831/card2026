@@ -17,11 +17,17 @@ var fonts: Font
 var soft_choice: String = "finance"
 var notice: String = ""
 var hand_panels: Array = []
+var targeting: bool = false
+var detail_box: VBoxContainer
+const AFF_COLORS = {"admin":Color("328cd8"),"politics":Color("ca5460"),"press":Color("8f72cf"),"business":Color("b18a36"),"community":Color("39876b"),"noir":Color("746782")}
 
 func _ready():
 	fonts = load("res://fonts/NotoSansJP.ttf") if ResourceLoader.exists("res://fonts/NotoSansJP.ttf") else SystemFont.new()
 	var theme = Theme.new()
-	theme.default_font = fonts
+	var weighted = FontVariation.new()
+	weighted.base_font = fonts
+	weighted.variation_opentype = {"wght":650}
+	theme.default_font = weighted
 	theme.default_font_size = 21
 	self.theme = theme
 	audio = AudioStreamPlayer.new()
@@ -32,16 +38,14 @@ func _ready():
 	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(bg)
-	var scroll = ScrollContainer.new()
-	scroll.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	add_child(scroll)
 	var margin = MarginContainer.new()
-	margin.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	for edge in ["left","right","top","bottom"]: margin.add_theme_constant_override("margin_"+edge,22)
-	scroll.add_child(margin)
+	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	for edge in ["left","right","top","bottom"]: margin.add_theme_constant_override("margin_"+edge,12)
+	add_child(margin)
 	body = VBoxContainer.new()
 	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body.add_theme_constant_override("separation",14)
+	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	body.add_theme_constant_override("separation",8)
 	margin.add_child(body)
 	show_menu()
 
@@ -67,16 +71,16 @@ func style(color: Color, border: Color) -> StyleBoxFlat:
 	box.border_color = border
 	box.set_border_width_all(2)
 	box.set_corner_radius_all(5)
-	box.content_margin_left = 16
-	box.content_margin_right = 16
-	box.content_margin_top = 12
-	box.content_margin_bottom = 12
+	box.content_margin_left = 10
+	box.content_margin_right = 10
+	box.content_margin_top = 6
+	box.content_margin_bottom = 6
 	return box
 
 func button(value: String, parent: Node, action: Callable, disabled: bool = false, accent: bool = false) -> Button:
 	var btn = Button.new()
 	btn.text = value
-	btn.custom_minimum_size.y = 60
+	btn.custom_minimum_size.y = 48
 	btn.add_theme_stylebox_override("normal",style(GOLD if accent else Color("263d49"),GOLD if accent else Color("67808b")))
 	btn.add_theme_stylebox_override("hover",style(Color("365664"),GOLD))
 	btn.add_theme_stylebox_override("pressed",style(Color("4c6b77"),PAPER))
@@ -105,8 +109,9 @@ func panel(parent: Node, color: Color = Color("20333f")) -> VBoxContainer:
 func show_menu():
 	playing = false
 	selected = -1
+	targeting = false
 	clear_body()
-	text("KASUMIGASEKI  /  GODOT PROTOTYPE 01",body,18,GOLD)
+	text("KASUMIGASEKI  /  GODOT PROTOTYPE 02",body,18,GOLD)
 	text("政局の手札",body,42,GOLD)
 	text("夢の超特急 — 国会決戦",body,28)
 	text("実機確認用の1戦です。準備戦・報酬・キャンペーンはHTML版に残しています。\n今回は準備成果を選んで本戦へ進みます。HP30／基本3コスト／手札保持・通常1枚ドロー。")
@@ -130,6 +135,8 @@ func show_menu():
 	text("人物・組織・案件は架空です。APKは試遊用。横画面を推奨します。",body,18,Color("9cabb2"))
 
 func start_battle(type: String):
+	selected = -1
+	targeting = false
 	game.start(type,soft_choice,int(Time.get_ticks_usec()) & 0xffffffff)
 	playing = true
 	notice = "敵の予告を確認。使わない手札は次ターンに残ります。"
@@ -137,6 +144,8 @@ func start_battle(type: String):
 	render_battle()
 
 func resume_battle():
+	selected = -1
+	targeting = false
 	if game.load_game(SAVE_PATH):
 		playing = true
 		notice = "保存した戦闘を再開しました。"
@@ -149,76 +158,166 @@ func persist():
 func render_battle():
 	clear_body()
 	var b = game.b
+	if selected >= b.hand.size(): selected = -1; targeting = false
 	var header = row()
-	text("政局の手札  /  国会決戦",header,30,GOLD)
-	button("SE：OFF" if muted else "SE：ON",header,func(): muted = not muted; render_battle())
-	button("初期画面",header,show_menu)
-	text("第%dターン   コスト %d   次の攻撃＋%d   山札%d / 捨て札%d" % [b.turn,b.energy,b.boost,b.pile.size(),b.discard.size()],body,23)
+	text("政局の手札 / 国会決戦",header,25,GOLD)
+	text("第%dターン  コスト%d/3  山札%d / 捨て札%d" % [b.turn,b.energy,b.pile.size(),b.discard.size()],header,22)
+	button("設定",header,show_settings)
 	var arena = row()
+	arena.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	var own = panel(arena)
-	player_label = text("内閣  HP %d / 30   ブロック %d" % [b.hp,b.block],own,28,Color("94d6b5"))
-	text("人物は最大3人。停止・手札戻しでも成長は保持。",own,17)
-	for ally in b.allies:
+	player_label = text("内閣  HP %d / 30   ブロック %d" % [b.hp,b.block],own,27,Color("94d6b5"))
+	text("次の攻撃＋%d / 次ターン追加ドロー%d" % [b.boost,b.nextDraw],own,18)
+	for index in range(3):
+		if index >= b.allies.size():
+			text("— 人物配置枠 —",own,20,Color("8ea3ad"))
+			continue
+		var ally = b.allies[index]
 		var g = b.get("growth",{}).get(ally.id,{"progress":0,"level":0})
-		var label = "成長済み ★" if g.level else "成長 %d / %d" % [g.progress,game.data.growth[ally.id]]
-		text(game.card(ally.id).name+" ／ "+label+(" ／ 能力停止中" if ally.disabledUntil >= b.turn else " ／ 有効"),own,20,GOLD)
-		text(game.card(ally.id).text,own,17)
-		button("配置解除："+game.card(ally.id).name,own,func(): retire_person(ally.id),game.done or b.outcome != null or selected >= 0)
+		var growth = "成長済 ★" if g.level else "成長%d/%d" % [g.progress,game.data.growth[ally.id]]
+		button(game.card(ally.id).name+"  "+growth+(" 停止中" if ally.disabledUntil >= b.turn else " 有効"),own,func(): show_person(ally.id),false)
 	var enemy = panel(arena,Color("352e39"))
-	enemy_label = text("国会  HP %d / 30   ブロック %d" % [b.enemyHP,b.enemyBlock],enemy,28,Color("e69992"))
-	text("予告攻撃 %d ／ 現在の防御後 %d" % [game.forecast(),maxi(0,game.forecast()-int(b.block))],enemy,22,GOLD)
+	enemy_label = text("国会  HP %d / 30   ブロック %d" % [b.enemyHP,b.enemyBlock],enemy,27,Color("f3b0a6"))
+	text("予告攻撃%d / 防御後%d" % [game.forecast(),maxi(0,game.forecast()-int(b.block))],enemy,22,GOLD)
+	text("敵人物：次の検証で追加予定",enemy,17,Color("bfc7d1"))
 	for forecast in b.plan:
 		var effects: Array = []
 		for e in forecast.effects:
 			if e.op == "damage": effects.append("攻撃%d" % e.n)
 			elif e.op == "block": effects.append("次手番防御%d" % e.n)
-			else: effects.append(("手札戻し" if e.op == "bounce" else "能力停止")+"："+(game.card(forecast.target).name if forecast.get("target") != null else "対象なし"))
+			else: effects.append(("手札戻し" if e.op == "bounce" else "停止")+"："+(game.card(forecast.target).name if forecast.get("target") != null else "対象なし"))
 		var aff = game.data.attributes.get(forecast.get("aff",""),"無属性")
 		var issue = game.data.issues.get(forecast.get("issue",""),{}).get("name","疑惑" if forecast.get("issue") == "scandal" else "共通防御")
-		text("属性："+aff+" ／ 論点："+issue,enemy,16,Color("b9b7c6"))
-		var label = "%s［%d］%s" % [forecast.name,forecast.cost,"無効／延期済み" if forecast.cancelled else "・".join(effects)]
-		if selected >= 0:
-			var e = game.target_effect(game.card(b.hand[selected]))
-			var valid = e != null and game.targets(e).any(func(p): return p.uid == forecast.uid)
-			button(label,enemy,func(): use_card(selected,forecast.uid),not valid,true)
-		else: text(label,enemy,19)
-	if game.done:
-		text(game.result+" — 今回のGodot試作はここまでです。",body,34,GOLD)
-		button("初期画面へ",body,show_menu,false,true)
-	elif b.outcome == "win": text("相手を倒しました。勝利確定まではUndoできます。",body,25,GOLD)
-	if b.hand.size() > 7 and b.outcome == null: notice = "手札上限7枚。超過分を選んで捨ててください。"
-	text(notice,body,21,GOLD)
-	if selected >= 0: button("対象選択をキャンセル",body,func(): selected = -1; render_battle())
-	var hand = HFlowContainer.new()
-	hand.add_theme_constant_override("h_separation",12)
-	hand.add_theme_constant_override("v_separation",12)
-	body.add_child(hand)
+		var label = "%s / %s  %s［%d］\n%s" % [aff,issue,forecast.name,forecast.cost,"無効・延期済" if forecast.cancelled else " / ".join(effects)]
+		if targeting and selected >= 0:
+			var effect = game.target_effect(game.card(b.hand[selected]))
+			var valid = effect != null and game.targets(effect).any(func(p): return p.uid == forecast.uid)
+			var target_btn = button(label,enemy,func(): use_card(selected,forecast.uid),not valid,true)
+			target_btn.add_theme_font_size_override("font_size",18)
+		else: text(label,enemy,17)
+	var detail = panel(body)
+	detail_box = detail
+	var detail_row = row(detail)
+	var description = VBoxContainer.new()
+	description.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	detail_row.add_child(description)
+	if selected >= 0:
+		var c = game.card(b.hand[selected])
+		text("%s / %s / コスト%d" % [c.name,game.data.attributes[c.aff],game.cost(c)],description,23,GOLD)
+		var full = text(c.text,description,20)
+		full.max_lines_visible = 2
+		full.custom_minimum_size.x = 1
+		full.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		if b.hand.size() > 7 and b.outcome == null:
+			button("超過分を捨てる",detail_row,func(): discard_card(selected),game.done,true)
+		else:
+			button("対象を選択中" if targeting else "使用",detail_row,activate_selected,not game.can(c.id) or targeting,true)
+		button("全文",detail_row,func(): show_description(c))
+		button("解除",detail_row,func(): selected = -1; targeting = false; render_battle())
+	else:
+		text("手札をタップして選択",description,23,GOLD)
+		text("説明を確認して「使用」。人物をタップすると能力と配置解除を表示。",description,20)
+	var hand = row()
+	hand.custom_minimum_size.y = 152
+	# Overflow cards remain individually reachable without shrinking every card.
+	var hand_scroll = ScrollContainer.new()
+	hand_scroll.name = "HandOverflow"
+	hand_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	hand_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	hand_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	hand.add_child(hand_scroll)
+	var cards = HBoxContainer.new()
+	cards.add_theme_constant_override("separation",8)
+	cards.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	hand_scroll.add_child(cards)
 	for i in range(b.hand.size()):
 		var c = game.card(b.hand[i])
-		var holder = PanelContainer.new()
-		holder.custom_minimum_size = Vector2(282,230)
-		holder.add_theme_stylebox_override("panel",style(PAPER,Color("957448")))
-		hand.add_child(holder)
+		var holder = Button.new()
+		holder.name = "HandCard%d" % i
+		holder.custom_minimum_size = Vector2(166,140)
+		holder.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		holder.add_theme_stylebox_override("normal",style(PAPER,GOLD if selected == i else Color("71838b")))
+		holder.add_theme_stylebox_override("hover",style(Color("fff0cf"),GOLD))
+		holder.add_theme_stylebox_override("focus",style(Color(0,0,0,0),GOLD))
+		holder.pressed.connect(func(): select_card(i))
+		holder.disabled = busy
+		cards.add_child(holder)
 		hand_panels.append(holder)
 		var content = VBoxContainer.new()
+		content.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		content.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		content.offset_left = 8; content.offset_right = -8; content.offset_top = 6; content.offset_bottom = -6
 		holder.add_child(content)
-		text("%s  コスト%d" % [c.name,game.cost(c)],content,22,INK)
-		text(game.data.attributes[c.aff]+" ／ "+{"attack":"攻撃","defense":"防御","prep":"準備","disrupt":"妨害","person":"人物"}.get(c.type,"負担"),content,17,Color("48616b"))
-		var description = text(c.text,content,17,INK)
-		description.custom_minimum_size.x = 248
-		description.size_flags_vertical = Control.SIZE_EXPAND_FILL
-		if b.hand.size() > 7 and b.outcome == null:
-			button("上限超過：捨てる",content,func(): discard_card(i),game.done)
-		else:
-			button("使用",content,func(): select_card(i),not game.can(c.id) or selected >= 0,true)
-		button("説明を拡大",content,func(): show_description(c))
+		var title = text("%d  %s" % [game.cost(c),c.name],content,19,INK)
+		title.custom_minimum_size.x = 1
+		title.max_lines_visible = 2
+		title.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		var art = TextureRect.new()
+		art.texture = load("res://art/placeholders/"+c.type+".svg") if c.type in ["attack","defense","prep","disrupt","person"] else load("res://art/placeholders/disrupt.svg")
+		art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		art.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		art.modulate = AFF_COLORS.get(c.aff,INK)
+		content.add_child(art)
+		text(game.data.attributes[c.aff]+" / "+{"attack":"攻撃","defense":"防御","prep":"準備","disrupt":"妨害","person":"人物"}.get(c.type,"負担"),content,17,INK)
+		for child in content.get_children(): child.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var actions = row()
-	button("勝利を確定" if b.outcome == "win" else "ターン終了",actions,end_action,game.done or selected >= 0 or b.hand.size() > 7 and b.outcome == null,true)
+	var status = game.result if game.done else ("手札超過：カードを選んで捨てる" if b.hand.size() > 7 else notice)
+	var status_label = text(status,actions,18,GOLD)
+	status_label.max_lines_visible = 2
+	button("ログ",actions,show_log)
 	button("1手戻す",actions,func(): undo_action(false),game.history.is_empty() or game.done)
 	button("ターンを戻す",actions,func(): undo_action(true),game.history.is_empty() or game.done)
-	text("seed：%d ／ 非公開の敵手札・山札は表示しません。" % game.initial_seed,body,16,Color("98a8af"))
-	var logbox = panel(body)
-	for line in b.log.slice(0,6): text(line,logbox,17)
+	button("勝利を確定" if b.outcome == "win" else "ターン終了",actions,end_action,game.done or targeting or b.hand.size() > 7 and b.outcome == null,true)
+
+func activate_selected():
+	if busy or selected < 0: return
+	if game.target_effect(game.card(game.b.hand[selected])) != null:
+		targeting = true
+		notice = "金色の敵予告から対象を選んでください。"
+		render_battle()
+	else: use_card(selected,null)
+
+func show_person(id: String):
+	var dialog = AcceptDialog.new()
+	dialog.title = game.card(id).name
+	dialog.dialog_text = game.card(id).text+"\n停止・手札戻しでも成長は保持します。"
+	var retire = dialog.add_button("配置解除",true,"retire")
+	retire.disabled = busy or game.done or game.b.outcome != null or targeting
+	dialog.custom_action.connect(func(_action): dialog.queue_free(); retire_person(id))
+	add_child(dialog)
+	dialog.confirmed.connect(dialog.queue_free)
+	dialog.canceled.connect(dialog.queue_free)
+	dialog.popup_centered(Vector2i(680,260))
+
+func show_log():
+	var dialog = AcceptDialog.new()
+	dialog.title = "戦闘ログ / seed %d" % game.initial_seed
+	var log_text = TextEdit.new()
+	log_text.editable = false
+	log_text.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
+	log_text.custom_minimum_size = Vector2(780,400)
+	log_text.text = "\n".join(game.b.log)
+	dialog.add_child(log_text)
+	add_child(dialog)
+	dialog.confirmed.connect(dialog.queue_free)
+	dialog.canceled.connect(dialog.queue_free)
+	dialog.popup_centered()
+
+func show_settings():
+	var dialog = AcceptDialog.new()
+	dialog.title = "設定"
+	dialog.dialog_text = "戦闘は自動保存されます。"
+	dialog.add_button("SE切替",true,"sound")
+	dialog.add_button("初期画面",true,"menu")
+	dialog.custom_action.connect(func(action):
+		dialog.queue_free()
+		if action == "sound": muted = not muted; render_battle()
+		else: show_menu())
+	add_child(dialog)
+	dialog.confirmed.connect(dialog.queue_free)
+	dialog.canceled.connect(dialog.queue_free)
+	dialog.popup_centered()
 
 func show_description(c: Dictionary):
 	var dialog = AcceptDialog.new()
@@ -232,11 +331,9 @@ func show_description(c: Dictionary):
 
 func select_card(index: int):
 	if busy: return
-	if game.target_effect(game.card(game.b.hand[index])) != null:
-		selected = index
-		notice = "対象の敵予告を選んでください。"
-		render_battle()
-	else: use_card(index,null)
+	selected = index
+	targeting = false
+	render_battle()
 
 func use_card(index: int, uid):
 	if busy: return
@@ -244,6 +341,7 @@ func use_card(index: int, uid):
 	var name = game.card(game.b.hand[index]).name
 	if not game.play(index,uid): return
 	selected = -1
+	targeting = false
 	notice = name+"を使用。"
 	persist()
 	busy = true
@@ -262,7 +360,7 @@ func freeze_buttons(node: Node):
 	for child in node.get_children(): freeze_buttons(child)
 
 func end_action():
-	if busy or selected >= 0: return
+	if busy or targeting: return
 	var before = game.b.duplicate(true)
 	game.end_turn()
 	notice = "敵の行動が解決しました。次の予告を確認してください。"
@@ -273,6 +371,7 @@ func undo_action(all_turn: bool):
 	if busy: return
 	game.undo(all_turn)
 	selected = -1
+	targeting = false
 	notice = "操作を取り消しました。乱数も復元しています。"
 	persist()
 	render_battle()
@@ -280,11 +379,13 @@ func undo_action(all_turn: bool):
 func discard_card(index: int):
 	if busy: return
 	game.discard_overflow(index)
+	selected = -1
+	targeting = false
 	persist()
 	render_battle()
 
 func retire_person(id: String):
-	if busy or selected >= 0: return
+	if busy or targeting: return
 	game.retire(id)
 	persist()
 	render_battle()

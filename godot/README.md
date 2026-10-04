@@ -5,3 +5,5 @@ Godot 4.6 stableで`project.godot`を開く。日本語フォントはリポジ�
 今回は国会決戦1戦。準備成果は開始時に選択。キャンペーン・報酬・新章はHTML v18に残す。
 
 Android APKはGitHub Actionsで生成。[導入・署名・検証資料](../docs/GODOT_ANDROID.md)を参照。
+
+UI試作02の配置・制限・検証は `../docs/GODOT_UI_V02.md` を参照。

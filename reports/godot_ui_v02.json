@@ -1,0 +1,26 @@
+{
+  "version": "Godot UI02",
+  "battleRulesChanged": false,
+  "parity": {
+    "battles": 48,
+    "states": 896,
+    "passed": true
+  },
+  "uiSmokePassed": true,
+  "layoutGeometry": {
+    "viewports": [
+      "1280x720",
+      "1560x720"
+    ],
+    "hand": 7,
+    "allies": 3,
+    "forecasts": 3,
+    "passed": true
+  },
+  "htmlRegressionPassed": true,
+  "apkSignatureVerified": true,
+  "apkSha256": "92a3d6388569c7fc137a862c9513e31931f4c7a197b097592310646490592655",
+  "visualDeviceVerification": false,
+  "enemyPeopleImplemented": false,
+  "cardArt": "five SVG placeholders; no final illustrations"
+}
